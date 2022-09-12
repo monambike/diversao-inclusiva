@@ -1,0 +1,1112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esreciclagem</name>
+    <events>
+        <variable constant="0" name="vida2" sid="281977963925600" static="0" type="number">3</variable>
+        <event-block sid="591840899082077">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="587538674532218" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-3" name="Set position" sid="606775015239192" type="jmcursor">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">mouse.y</param>
+                </action>
+                <action disabled="1" id="0" name="Set cursor style" sid="391722268729296" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351466298626030">
+            <conditions />
+            <actions>
+                <action id="5" name="Set frame" sid="793446935523446" type="jmvida">
+                    <param id="0" name="Frame number">vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="560814607741259">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="172111123218701" type="jmobjetos">
+                    <param id="0" name="Object">red</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="649841202951594" type="jmobjetos" />
+                <action id="3" name="Start" sid="338530564170730" type="jmpoeira">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="457717533615582" type="System">
+                    <param id="0" name="Object to create">jmpoeira</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmobjetos.X</param>
+                    <param id="3" name="Y">jmobjetos.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="220507197545501" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="596859430814243" type="jmpoeira" />
+                <action id="-15" name="Set visible" sid="630754882344349" type="rbw1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="961086227132300" type="bio1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="909928991834163" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-15" name="Set visible" sid="255597145020136" type="bio1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="557357724553391" type="rbw1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="339982386064308">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="247647021627537" type="jmobjetos">
+                    <param id="0" name="Object">blue</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="792047273672796" type="jmobjetos" />
+                <action id="3" name="Start" sid="291812944860068" type="jmpoeira">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="770827928665204" type="System">
+                    <param id="0" name="Object to create">jmpoeira</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmobjetos.X</param>
+                    <param id="3" name="Y">jmobjetos.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="407311606594068" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="161879532754223" type="jmpoeira" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="385972520190287">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="511999064887692" type="jmobjetos">
+                    <param id="0" name="Object">green</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="432797009462950" type="jmobjetos" />
+                <action id="3" name="Start" sid="636375920725223" type="jmpoeira">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="688622861903260" type="System">
+                    <param id="0" name="Object to create">jmpoeira</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmobjetos.X</param>
+                    <param id="3" name="Y">jmobjetos.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="291780809805776" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="298079859932331" type="jmpoeira" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="260462413543165">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="386720280288039" type="jmobjetos">
+                    <param id="0" name="Object">yellow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="111226960947810" type="jmobjetos" />
+                <action id="3" name="Start" sid="459360194861858" type="jmpoeira">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="111879698005060" type="System">
+                    <param id="0" name="Object to create">jmpoeira</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmobjetos.X</param>
+                    <param id="3" name="Y">jmobjetos.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="934459226871709" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="949997407014987" type="jmpoeira" />
+            </actions>
+        </event-block>
+        <event-block sid="916724816468510">
+            <conditions>
+                <condition id="-18" name="On created" sid="321603642262672" type="jmobjetos" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="203134400992011" type="jmobjetos">
+                    <param id="0" name="Frame number">random(0,16)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="714690028661606">
+            <conditions>
+                <condition id="2" name="Is playing" sid="696473909861535" type="esteira">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="788655812889669" type="esteira">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="435198549225222">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="930795431784274" type="jmobjetos">
+                    <param id="0" name="Instance variable">direcao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="551488882395699" type="jmobjetos">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="486794040796139">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="579066471589727" type="jmobjetos">
+                    <param id="0" name="Object">jmmovimento</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="119627497320760" type="jmobjetos">
+                    <param id="0" name="Instance variable">direcao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="903269482546038">
+            <conditions>
+                <condition behavior="DragDrop" id="1" name="On drag start" sid="343835667577030" type="jmobjetos" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="646960620978667" type="jmobjetos">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="236200993496673">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="746992063553430" type="jmobjetos" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="5" name="Set gravity" sid="506672787758084" type="jmobjetos">
+                    <param id="0" name="Gravity">15500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164029568245474">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="846095349931299" type="System">
+                    <param id="0" name="Interval (seconds)">2.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="193929942165196" type="jmgerador">
+                    <param id="0" name="Object">jmobjetos</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="851293551818691">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="985831808261114" type="jmobjetos" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="881928377658814" type="jmobjetos">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="224363778556822" type="jmobjetos">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="111101568327428" type="jmobjetos">
+                    <param id="0" name="Gravity">5500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="608833590548020">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="783976167996898" type="jmobjetos">
+                    <param id="0" name="Object">jmmorte</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="654653039420774" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="640744194511927" type="jmobjetos" />
+            </actions>
+            <sub-events>
+                <event-block sid="642354099714403">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="779832077152798" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="588887252889409" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="157481815181105">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="128149018098666" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="711988318137266" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980752102455916">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="877085227095144" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="345020650622592" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342425236336591">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="488625614234688" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="875095716285973" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="298581882298246">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="250389892166920" type="jmobjetos">
+                    <param id="0" name="Object">red</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="197277419649931" type="jmobjetos" />
+                <action id="-11" name="Subtract from" sid="362811299500017" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="242624761064677">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="405188013084063" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="583424953050007" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="692934610846973" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="490918907396055" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="935502928936485" type="confettiCaindo1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="708999811407372" type="confettiCaindo1">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="509986358450815" type="rbw1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="298902061616979" type="bio1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="657808018536173" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="177180884540947" type="bio1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="666637060891616" type="rbw1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="811546444820632" type="confettiCaindo1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="228460624721680">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="733222144665433" type="System" />
+                        <condition id="3" name="Compare frame" sid="303204384468828" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="568327892243219" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="143875933055702" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="880583268873515" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="402112903106275" type="confettiCaindo1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="115921273334121" type="confettiCaindo1">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="228181308363871" type="rbw1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="541304317091617" type="bio1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="624899555301472" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="711202531993834" type="bio1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="262725891493208" type="rbw1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="628297236885489" type="confettiCaindo1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="277210261639606">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="812562060104527" type="System" />
+                        <condition id="3" name="Compare frame" sid="500860548980453" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="410433247449329" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="764329869540339" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="551860506132825" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="959626580441716" type="confettiCaindo1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="328091520187918" type="confettiCaindo1">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="491026857520031" type="rbw1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="182107615069479" type="bio1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="219998232398938" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="848334875578177" type="bio1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="855948223814110" type="rbw1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="340574391602314" type="confettiCaindo1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="963326653842563">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="249999832427437" type="jmobjetos">
+                    <param id="0" name="Object">blue</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="485532080675885" type="jmobjetos" />
+                <action id="-11" name="Subtract from" sid="704041297790252" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="385341499538137">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="740944306770440" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="169022494526619" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="968642370109674" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="120734965949030" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="470996542801018" type="confettiCaindo2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="769473567163892" type="confettiCaindo2">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="680443198055874" type="rbw2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="367126345549850" type="bio2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="839122307753462" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="601366689115158" type="bio2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="372113597964274" type="rbw2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="428307022088253" type="confettiCaindo2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="224448049058048">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="528887000882305" type="System" />
+                        <condition id="3" name="Compare frame" sid="999106770888370" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="543077303576027" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="824075017862962" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="584282661688739" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="214432551233883" type="confettiCaindo2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="618318119787506" type="confettiCaindo2">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="543186667829798" type="rbw2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="645366567592126" type="bio2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="834330160025818" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="395673469407844" type="bio2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="788371027391512" type="rbw2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="243885617477452" type="confettiCaindo2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="867118744273034">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="421756755583767" type="System" />
+                        <condition id="3" name="Compare frame" sid="423924668143480" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="270544927753182" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="411141452620001" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="331933095141056" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="342472371527197" type="confettiCaindo2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="668375770639330" type="confettiCaindo2">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="771492421994152" type="rbw2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="577980411652145" type="bio2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="416593458059720" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="690075272861850" type="bio2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="249837997576297" type="rbw2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="923943286008408" type="confettiCaindo2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="387033467116342">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="474827543128987" type="jmobjetos">
+                    <param id="0" name="Object">green</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="166749783389748" type="jmobjetos" />
+                <action id="-11" name="Subtract from" sid="989745206100660" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="141662627924433">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="678937654323749" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="218123262922155" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="723899325941205" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="253877352200455" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="242660856132353" type="confettiCaindo3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="367359828002969" type="confettiCaindo3">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="106391845588834" type="rbw3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="328527294413797" type="bio3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="616660724551727" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="358866944241829" type="bio3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="944704196114934" type="rbw3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="160634113504234" type="confettiCaindo3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="309227093662998">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="387361042263562" type="System" />
+                        <condition id="3" name="Compare frame" sid="199716608916406" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="927073446014748" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="418421392649573" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="829270543339489" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="421585532313366" type="confettiCaindo3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="678563876974075" type="confettiCaindo3">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="433667593856480" type="rbw3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="610259382577202" type="bio3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="987731559311915" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="836837692303958" type="bio3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="131532259259611" type="rbw3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="551669721462435" type="confettiCaindo3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="224697238681620">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="815085560850890" type="System" />
+                        <condition id="3" name="Compare frame" sid="549120008281695" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="943717584256228" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="660827103526993" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="442321964775337" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="118245772224800" type="confettiCaindo3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="552075565218173" type="confettiCaindo3">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="540071621631711" type="rbw3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="221026456950926" type="bio3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="415118265303412" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="428581756086073" type="bio3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="419193740406849" type="rbw3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="178569485122421" type="confettiCaindo3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="955816593796483">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="757228947951339" type="jmobjetos">
+                    <param id="0" name="Object">yellow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="324893995620604" type="jmobjetos" />
+                <action id="-11" name="Subtract from" sid="496269008823842" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="621430242928956">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="707238765575411" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="260203953630938" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="677613095906442" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="466869967805584" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="649786403892017" type="confettiCaindo4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="658373958855292" type="confettiCaindo4">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="884115589826799" type="rbw4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="855964104151016" type="bio4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="877740117590855" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="434193079203830" type="bio4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="188529519794947" type="rbw4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="448477561558481" type="confettiCaindo4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="170065733716739">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="277361247221590" type="System" />
+                        <condition id="3" name="Compare frame" sid="657431474395197" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="680102028692751" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="487088338127927" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="673363559383521" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="344575690371508" type="confettiCaindo4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="349929248457687" type="confettiCaindo4">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="307916111728890" type="rbw4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="572967584512480" type="bio4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="201558986694467" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="539551609992522" type="bio4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="840820483649214" type="rbw4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="506491144947404" type="confettiCaindo4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="674568792497807">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="248147176948007" type="System" />
+                        <condition id="3" name="Compare frame" sid="906777367924246" type="jmobjetos">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="664668335038777" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="440655340570632" type="jmpontos">
+                            <param id="0" name="Instance variable">ponto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="591586918816334" type="jmpontos">
+                            <param id="0" name="Text">jmpontos.ponto</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="353338940898354" type="confettiCaindo4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Start" sid="383242735661930" type="confettiCaindo4">
+                            <param id="0" name="From">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="458668252847022" type="rbw4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="743727553212532" type="bio4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="340594112946980" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="485326610416310" type="bio4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="853621390961753" type="rbw4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="929627477948692" type="confettiCaindo4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="730956015866102">
+            <conditions>
+                <condition id="0" name="On click" sid="726927388595912" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="113241083796100" type="jmcursor">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="546967557688426">
+            <conditions>
+                <condition id="3" name="On button released" sid="134078589503072" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="735456375339514" type="jmcursor">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771167311240656">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="586948995370319" type="jmobjetos" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="545441115447499">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="472259176615689" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="373714229062562" type="red">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="262211045810014">
+            <conditions>
+                <condition id="3" name="On button released" sid="669990048551900" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="581105061237958" type="red">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="555099315649442">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="402838301609265" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="849868981791111" type="blue">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="391224110517529">
+            <conditions>
+                <condition id="3" name="On button released" sid="144057340623047" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="766335637680686" type="blue">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="373293956472841">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="389378362218608" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="560604159970835" type="green">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606130218716432">
+            <conditions>
+                <condition id="3" name="On button released" sid="919335679695372" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="403654198718449" type="green">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="532443806790855">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="586786964786914" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="190421244939017" type="yellow">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="302292833446852">
+            <conditions>
+                <condition id="3" name="On button released" sid="279876413996923" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="436529495162319" type="yellow">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="103858521130822">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="964979846231080" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="628926613254453" type="jmmorte">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="608086535876380">
+            <conditions>
+                <condition id="3" name="On button released" sid="744883972875325" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="232008856081061" type="jmmorte">
+                    <param id="0" name="Collisions">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="763586626358553">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="912947995237726" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="806424137801348" type="jmgerador" />
+                <action id="2" name="Stop" sid="362725808193255" type="esteira" />
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="719885234351847" type="jmobjetos">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="565216712824380" type="jmmovimento" />
+                <action id="-16" name="Wait" sid="747608805928226" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="740799325817745" type="jmobjetos" />
+            </actions>
+        </event-block>
+        <event-block sid="842269817728406">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="530828242248911" type="jmobjetos" />
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="371641214903765" type="jmpoeira">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="254493651448891" type="System">
+                    <param id="0" name="Object to create">jmpoeira</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmobjetos.X</param>
+                    <param id="3" name="Y">jmobjetos.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="625208526417758" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="804050564501811" type="jmpoeira" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

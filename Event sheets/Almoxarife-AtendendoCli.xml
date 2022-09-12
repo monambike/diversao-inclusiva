@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Almoxarife-AtendendoCli</name>
+    <events>
+        <variable constant="0" name="EntregarItemCliente" sid="773996609194834" static="0" type="number">0</variable>
+        <event-block sid="413109373016186">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="158997708377093" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite49</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="600068855602415" type="System">
+                    <param id="0" name="Layout">&quot;Almoxarife-Prateleiras&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="530491711513379">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="865031083146799" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btnMenuAtendendoCli</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="579706342815130" type="System">
+                    <param id="0" name="Layout">&quot;EscolhaDeJogoAlmoxarife&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="486186565544768" title="StartLayoutCliente">
+            <sub-events>
+                <event-block sid="964057526136291">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="466168870359484" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set canvas size" sid="898564423496826" type="System">
+                            <param id="0" name="Width">880</param>
+                            <param id="1" name="Height">500</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="765008317503103">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="584555267098095" type="System">
+                                    <param id="0" name="Variable">EntregarItemCliente</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="245867486699007" type="cliente1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="178314125649888" type="CuboPedidoCli">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="573358344274482">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="669884877863734" type="System">
+                                    <param id="0" name="Variable">EntregarItemCliente</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="516397706811074" type="cliente4">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="790899641864267" type="MarteloPedidoCli">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="921431412072842">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="922138994590348" type="System">
+                                    <param id="0" name="Variable">EntregarItemCliente</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="706188428338733" type="cliente2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="900472792625705" type="TelefonePedidoCli">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="641860681361021" title="SemEntrega">
+            <sub-events>
+                <event-block sid="565056165250727">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="288999917529319" type="System">
+                            <param id="0" name="Variable">Pedido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="275648013583238">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="165252164295317" type="btnEntregar" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="596511615230605" type="SemEntrega">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="875112778747341" type="txtSemEntrega">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357545092564548">
+                            <conditions>
+                                <condition id="1" name="On any click" sid="982258080582401" type="Mouse" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="242302414023655" type="SemEntrega">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="605381496131553" type="txtSemEntrega">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="656636507741615" title="EntregaCubo">
+            <sub-events>
+                <event-block sid="604906473302249">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="343203243260544" type="System">
+                            <param id="0" name="Variable">Cubo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="474373485571806" type="CuboEntregaCli">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="910410500727420">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="279207823644754" type="btnEntregar" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="509348441249900">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="179325142911550" type="System">
+                                    <param id="0" name="Variable">Cubo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="212976419082570" type="cliente1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="253564507612464" type="CuboEntregaCli">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="425740167860478" type="CuboPedidoCli">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="103233512942250" type="cliente4">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="467687104309925" type="MarteloPedidoCli">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="712066601496095" type="System">
+                                    <param id="0" name="Variable">EntregarItemCliente</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="365209456476278" type="System">
+                                    <param id="0" name="Variable">Cubo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="128090318984769" type="Text10">
+                                    <param id="0" name="Instance variable">PontosAtendenoCli</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="919183502354973" title="EntregaMartelo">
+            <sub-events>
+                <event-block sid="289896958714896">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="126961483372591" type="System">
+                            <param id="0" name="Variable">Martelo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="252843968776058" type="MarteloEntregaCli">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="587760196328732">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="589552872544860" type="btnEntregar" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="475394327145730">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="709856646071922" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="171997703405972" type="cliente4">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="106222270314236" type="MarteloEntregaCli">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="560058286275125" type="MarteloPedidoCli">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="725266823611894" type="cliente2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="793212275889842" type="TelefonePedidoCli">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="147762653669410" type="System">
+                                    <param id="0" name="Variable">EntregarItemCliente</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="508514996251220" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

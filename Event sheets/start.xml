@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>start</name>
+    <events>
+        <event-block sid="360162981054339">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="998921954949343" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="736419983140345" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="458533289851027">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="679581090117877" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Text13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="891086565132734" type="System">
+                    <param id="0" name="Layout">&quot;TelaDeInicio&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Extra-QuedaLivre</name>
+    <events>
+        <variable constant="0" name="vida3" sid="282390008424410" static="0" type="number">3</variable>
+        <variable constant="0" name="vidaMax" sid="754910981564575" static="0" type="number">3</variable>
+        <event-block sid="763426597740320">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="457045636345708" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="304862001023452" type="PersonagemQuedaLivre">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action behavior="Platform" id="2" name="Set acceleration" sid="421031330152322" type="PersonagemQuedaLivre">
+                    <param id="0" name="Acceleration">5000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="687425249580923">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="513222998694191" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="118558196001204" type="PersonagemQuedaLivre">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action behavior="Platform" id="2" name="Set acceleration" sid="643138188289705" type="PersonagemQuedaLivre">
+                    <param id="0" name="Acceleration">5000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="790106582849216">
+            <conditions>
+                <condition id="1" name="On any click" sid="374318006020334" type="Mouse" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="733641357510862" type="PersonagemQuedaLivre">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="310714761286033">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="841375442704108" type="System">
+                    <param id="0" name="Variable">vida3</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="261035749032182" type="PersonagemQuedaLivre">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="262283266281176" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="910109484239669" type="NuvemQuedaLivre" />
+                <action id="-9" name="Destroy" sid="647193647711076" type="NuvemQuedaLivre2" />
+                <action id="-9" name="Destroy" sid="572418757635515" type="PersonagemQuedaLivre" />
+                <action id="-9" name="Destroy" sid="941680417306024" type="VidaExtraQuedaLivre" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="117457959293300" title="Avião">
+            <sub-events>
+                <event-block sid="931185555671594">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="331166804787110" type="System">
+                            <param id="0" name="Interval (seconds)">15.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="815605865887367" type="Aviao1">
+                            <param id="0" name="Speed">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="975349662985401">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="237605647828787" type="System">
+                            <param id="0" name="Interval (seconds)">25.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="449324343712417" type="Aviao2">
+                            <param id="0" name="Speed">110</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="210336825917491">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="401947722031775" type="System">
+                            <param id="0" name="Interval (seconds)">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="787676253201803" type="Aviao3">
+                            <param id="0" name="Speed">150</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="402694623802897" title="AddVida">
+            <sub-events>
+                <event-block sid="105988127666226">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="583358934799071" type="VidaQuedaLivre">
+                            <param id="0" name="Frame number">vida</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897827229345381">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="400019637668651" type="System">
+                            <param id="0" name="Interval (seconds)">5.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="710022506367102" type="GeradorQuedaLivre">
+                            <param id="0" name="Object">VidaExtraQuedaLivre</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">random(0,10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268415890664186">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="227578411978767" type="VidaExtraQuedaLivre">
+                            <param id="0" name="Object">PersonagemQuedaLivre</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="264105185527560" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">vidaMax</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="520805020156702" type="VidaExtraQuedaLivre" />
+                        <action id="-10" name="Add to" sid="301487031210386" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="285051563262058" type="System">
+                            <param id="0" name="Variable">vida3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="352927824520196" title="Nuvem">
+            <sub-events>
+                <event-block sid="950582878561334">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="465497299385812" type="System">
+                            <param id="0" name="Interval (seconds)">2.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="711226858383178" type="NuvemQuedaLivre">
+                            <param id="0" name="Frame number">random(0,0)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="756988227791910" type="GeradorQuedaLivre">
+                            <param id="0" name="Object">NuvemQuedaLivre</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">random(0,10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797609009320260">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="324198333032266" type="NuvemQuedaLivre">
+                            <param id="0" name="Object">PersonagemQuedaLivre</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="696571729636632" type="System">
+                            <param id="0" name="Variable">vida3</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="502487871176825" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="391685904457396" type="PersonagemQuedaLivre">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="502867216775404" type="NuvemQuedaLivre">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="959555044130049" type="NuvemQuedaLivre2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="148951788498817" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="476899076380569" type="NuvemQuedaLivre">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="834688358651122" type="NuvemQuedaLivre2">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="624025644354036">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="722850544971700" type="System">
+                            <param id="0" name="Interval (seconds)">3.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="964030811525077" type="NuvemQuedaLivre2">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="213338602187145" type="GeradorQuedaLivre">
+                            <param id="0" name="Object">NuvemQuedaLivre2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">random(0,10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

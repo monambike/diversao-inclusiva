@@ -1,0 +1,1297 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>0Ligueascores</name>
+    <events>
+        <comment>Ao iniciar o layout</comment>
+        <event-block sid="656822515487980">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="359261270025572" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="714959490822483" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="608054565579928" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action id="5" name="Set frame" sid="916985883104657" type="lac_imgBackgroundColorful">
+                    <param id="0" name="Frame number">round(random(0,lac_imgBackgroundColorful.AnimationFrameCount))</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Pegue todos os blocos de chão brancos e defina o número de blocos brancos para 0</comment>
+                <event-block sid="988898558882919">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="375997430024768" type="System">
+                            <param id="0" name="Object">lac_imgBlocks</param>
+                            <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="596525313204423" type="System">
+                            <param id="0" name="Object">lac_imgBlocks</param>
+                            <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">&quot;Ground&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="518986879486183" type="System">
+                            <param id="0" name="Variable">gWhiteBlocks</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Para cada bloco branco adicione +1 ao contador</comment>
+                        <event-block sid="766663974149160">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="747354172974668" type="System">
+                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="300526443535558" type="System">
+                                    <param id="0" name="Variable">gWhiteBlocks</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Pegue todos os blocos do tipo fonte</comment>
+                <event-block sid="422286866752904">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="498416523731339" type="System">
+                            <param id="0" name="Object">lac_imgBlocks</param>
+                            <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">&quot;Font&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Para cada fonte, adicione um ao contador</comment>
+                        <event-block sid="750496110106894">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="654366697229179" type="System">
+                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="910872250140107" type="System">
+                                    <param id="0" name="Variable">gCountFonts</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Depois divida o número de fontes por 2</comment>
+                <event-block sid="393917827768876">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="343760771765466" type="System">
+                            <param id="0" name="Variable">gCountFonts</param>
+                            <param id="1" name="Value">gCountFonts / 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Ao clicar</comment>
+        <event-block sid="515883186122508">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="763484991571765" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">lac_imgBlocks</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>pela primeira vez</comment>
+                <event-block sid="489158606833458">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="306791180367475" type="System">
+                            <param id="0" name="Variable">gMouseCondition</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>na fonte, ele pega a cor e coordenadas</comment>
+                        <event-block sid="876627481475011">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="682972335917331" type="lac_imgBlocks">
+                                    <param id="0" name="Animation">&quot;Font&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="758243718525917" type="System">
+                                    <param id="0" name="Variable">gMouseCondition</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="148251323130129" type="System">
+                                    <param id="0" name="Variable">gNumberColor</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="790528592557559" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionX</param>
+                                    <param id="1" name="Value">lac_imgBlocks.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="678234047275917" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionY</param>
+                                    <param id="1" name="Value">lac_imgBlocks.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="314845057913688" type="System">
+                                    <param id="0" name="Variable">gLastColoredBlock</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="623616360273257" type="System">
+                                    <param id="0" name="Variable">gFirstX</param>
+                                    <param id="1" name="Value">lac_imgBlocks.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="739081620548399" type="System">
+                                    <param id="0" name="Variable">gFirstY</param>
+                                    <param id="1" name="Value">lac_imgBlocks.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>onde ja está completo</comment>
+                        <event-block any="1" sid="825068589612830">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="397118318292017" type="lac_imgBlocks">
+                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="365903555700393" type="lac_imgBlocks">
+                                    <param id="0" name="Animation">&quot;Ground&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="486375120027856" type="System">
+                                    <param id="0" name="Variable">gNumberColor</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="898446286132296">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="205188062408744" type="System">
+                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>redefina o bloco para fonte</comment>
+                                        <event-block sid="771201580317550">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="754342784006246" type="System">
+                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;Completed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="438243347850939" type="System">
+                                                    <param id="0" name="Variable">gCountFonts</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="736369675771851">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="253547532887255" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                            <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">gNumberColor</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="542447755485872" type="System">
+                                                            <param id="0" name="Variable">gMouseCondition</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="818769640561507" type="lac_imgBlocks">
+                                                            <param id="0" name="Animation">&quot;Font&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="607875482760379" type="lac_imgBlocks">
+                                                            <param id="0" name="Frame number">gNumberColor</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>e exclui o caminho</comment>
+                                        <event-block sid="875373236070790">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="209670894516427" type="System">
+                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;Ground&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="405344472831534">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="605794939253931" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                            <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">gNumberColor</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="693433296971567" type="System">
+                                                            <param id="0" name="Variable">gMouseCondition</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="212841121792969" type="lac_imgBlocks">
+                                                            <param id="0" name="Animation">&quot;Ground&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="260019411065380" type="lac_imgBlocks">
+                                                            <param id="0" name="Frame number">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="644859407167437" type="System">
+                                                            <param id="0" name="Variable">gNumberColor</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Pela segunda vez</comment>
+                <event-block sid="484081801531922">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="535366998119230" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>e clique na fonte da mesma cor mas de localização diferente</comment>
+                        <event-block sid="609947343501136">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="277688834321800" type="lac_imgBlocks">
+                                    <param id="0" name="Animation">&quot;Font&quot;</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="785177349503400" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">gNumberColor</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="788584298787404">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="365066318038595" type="lac_imgBlocks">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="X co-ordinate">gFirstX</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="582568691008200" type="lac_imgBlocks">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Y co-ordinate">gFirstY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>pega todos os blocos que estejam com o mesmo frame da variável e com a animação de fonte e salva. Isso acontece caso o último bloco pintado seja adjacente a fonte.</comment>
+                                        <event-block sid="598648142819432">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="934765078588084" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="X co-ordinate">gGetBlockPositionX + 64</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="436141377249519" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="910640899150982">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="952108543639172" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="579244104233451">
+                                                            <conditions>
+                                                                <condition id="-33" name="Pick by comparison" sid="735178330276873" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">gNumberColor</param>
+                                                                </condition>
+                                                                <condition id="-33" name="Pick by comparison" sid="220546480414730" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">&quot;Font&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="428222269190044" type="lac_imgBlocks">
+                                                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="5" name="Set frame" sid="496656470598737" type="lac_imgBlocks">
+                                                                    <param id="0" name="Frame number">gNumberColor</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="644569698026907" type="System">
+                                                                    <param id="0" name="Variable">gMouseCondition</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-11" name="Subtract from" sid="228024750325149" type="System">
+                                                                    <param id="0" name="Variable">gCountFonts</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="707048058633736" type="System">
+                                                                    <param id="0" name="Object to create">lac_imgConnected</param>
+                                                                    <param id="1" name="Layer">3</param>
+                                                                    <param id="2" name="X">gGetBlockPositionX</param>
+                                                                    <param id="3" name="Y">gGetBlockPositionY</param>
+                                                                </action>
+                                                                <action id="-7" name="Set size" sid="368877703332588" type="lac_imgConnected">
+                                                                    <param id="0" name="Width">300</param>
+                                                                    <param id="1" name="Height">300</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="543467176440618" type="lac_imgConnected">
+                                                                    <param id="0" name="Animation">&quot;ani&quot;&amp;gNumberColor</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="3" name="Start" sid="389693952481953" type="lac_imgConnected">
+                                                                    <param id="0" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="955097460006739" type="System">
+                                                                    <param id="0" name="Variable">gNumberColor</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="301860278855723">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="465529047643257" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="X co-ordinate">gGetBlockPositionX - 64</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="102066116486131" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="164025965944799">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="951028656767985" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="989873559682716">
+                                                            <conditions>
+                                                                <condition id="-33" name="Pick by comparison" sid="539739995645357" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">gNumberColor</param>
+                                                                </condition>
+                                                                <condition id="-33" name="Pick by comparison" sid="508844411885811" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">&quot;Font&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="245376037828076" type="lac_imgBlocks">
+                                                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="5" name="Set frame" sid="753636758482856" type="lac_imgBlocks">
+                                                                    <param id="0" name="Frame number">gNumberColor</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="249694043853277" type="System">
+                                                                    <param id="0" name="Variable">gMouseCondition</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-11" name="Subtract from" sid="280982464626603" type="System">
+                                                                    <param id="0" name="Variable">gCountFonts</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="794999690578492" type="System">
+                                                                    <param id="0" name="Object to create">lac_imgConnected</param>
+                                                                    <param id="1" name="Layer">3</param>
+                                                                    <param id="2" name="X">gGetBlockPositionX</param>
+                                                                    <param id="3" name="Y">gGetBlockPositionY</param>
+                                                                </action>
+                                                                <action id="-7" name="Set size" sid="337701807034076" type="lac_imgConnected">
+                                                                    <param id="0" name="Width">300</param>
+                                                                    <param id="1" name="Height">300</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="543740854876186" type="lac_imgConnected">
+                                                                    <param id="0" name="Animation">&quot;ani&quot;&amp;gNumberColor</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="3" name="Start" sid="326867787377091" type="lac_imgConnected">
+                                                                    <param id="0" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="988726430171562" type="System">
+                                                                    <param id="0" name="Variable">gNumberColor</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="633801633706353">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="694486360199230" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="X co-ordinate">gGetBlockPositionX </param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="315965046063741" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY + 64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="697897455856625">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="453022741976983" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="690709119064355">
+                                                            <conditions>
+                                                                <condition id="-33" name="Pick by comparison" sid="697952891657300" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">gNumberColor</param>
+                                                                </condition>
+                                                                <condition id="-33" name="Pick by comparison" sid="525830754066967" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">&quot;Font&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="714020061852587" type="lac_imgBlocks">
+                                                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="5" name="Set frame" sid="692844727972364" type="lac_imgBlocks">
+                                                                    <param id="0" name="Frame number">gNumberColor</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="322570909278839" type="System">
+                                                                    <param id="0" name="Variable">gMouseCondition</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-11" name="Subtract from" sid="432456802024685" type="System">
+                                                                    <param id="0" name="Variable">gCountFonts</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="638641452163410" type="System">
+                                                                    <param id="0" name="Object to create">lac_imgConnected</param>
+                                                                    <param id="1" name="Layer">3</param>
+                                                                    <param id="2" name="X">gGetBlockPositionX</param>
+                                                                    <param id="3" name="Y">gGetBlockPositionY</param>
+                                                                </action>
+                                                                <action id="-7" name="Set size" sid="989008389669692" type="lac_imgConnected">
+                                                                    <param id="0" name="Width">300</param>
+                                                                    <param id="1" name="Height">300</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="479782706446756" type="lac_imgConnected">
+                                                                    <param id="0" name="Animation">&quot;ani&quot;&amp;gNumberColor</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="3" name="Start" sid="593374697592004" type="lac_imgConnected">
+                                                                    <param id="0" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="795013136630252" type="System">
+                                                                    <param id="0" name="Variable">gNumberColor</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="814913991941512">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="502051877462988" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="X co-ordinate">gGetBlockPositionX</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="731338778572259" type="lac_imgBlocks">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY - 64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="867246587429856">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="271681606501720" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="925203599147510">
+                                                            <conditions>
+                                                                <condition id="-33" name="Pick by comparison" sid="606587858084159" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">gNumberColor</param>
+                                                                </condition>
+                                                                <condition id="-33" name="Pick by comparison" sid="424363674050449" type="System">
+                                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Value">&quot;Font&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="618704732170174" type="lac_imgBlocks">
+                                                                    <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="5" name="Set frame" sid="649856325598980" type="lac_imgBlocks">
+                                                                    <param id="0" name="Frame number">gNumberColor</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="324957723022291" type="System">
+                                                                    <param id="0" name="Variable">gMouseCondition</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-11" name="Subtract from" sid="256936396843884" type="System">
+                                                                    <param id="0" name="Variable">gCountFonts</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="669527047898387" type="System">
+                                                                    <param id="0" name="Object to create">lac_imgConnected</param>
+                                                                    <param id="1" name="Layer">3</param>
+                                                                    <param id="2" name="X">gGetBlockPositionX</param>
+                                                                    <param id="3" name="Y">gGetBlockPositionY</param>
+                                                                </action>
+                                                                <action id="-7" name="Set size" sid="275598937159610" type="lac_imgConnected">
+                                                                    <param id="0" name="Width">300</param>
+                                                                    <param id="1" name="Height">300</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="628440628436601" type="lac_imgConnected">
+                                                                    <param id="0" name="Animation">&quot;ani&quot;&amp;gNumberColor</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="3" name="Start" sid="371375528439343" type="lac_imgConnected">
+                                                                    <param id="0" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="716169589072370" type="System">
+                                                                    <param id="0" name="Variable">gNumberColor</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>caso seja uma fonte de cor diferente, completado ou o chão ele apaga todos os blocos de chão com a cor do mouse</comment>
+                        <event-block sid="339318157557330">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="927521177303012" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="632021110852339">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="738914746443112" type="lac_imgBlocks">
+                                            <param id="0" name="Animation">&quot;Ground&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="551192246012244" type="lac_imgBlocks">
+                                            <param id="0" name="Animation">&quot;Completed&quot;</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="958665216455550" type="lac_imgBlocks">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">gNumberColor</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="449356182812743">
+                                            <conditions>
+                                                <condition id="-19" name="Pick all" sid="486690784474499" type="System">
+                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="191618024716939">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="502965599070135" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                            <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">gNumberColor</param>
+                                                        </condition>
+                                                        <condition id="-33" name="Pick by comparison" sid="395848916291754" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                            <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">&quot;Ground&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="436755095614240" type="System">
+                                                            <param id="0" name="Variable">gMouseCondition</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="254537265551569" type="lac_imgBlocks">
+                                                            <param id="0" name="Frame number">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="492923843159320" type="System">
+                                                            <param id="0" name="Variable">gNumberColor</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>e clique na fonte da mesma cor e de localização igual, ele apaga tudo</comment>
+                        <event-block sid="516381435624914">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="840592189877167" type="lac_imgBlocks">
+                                    <param id="0" name="Animation">&quot;Font&quot;</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="296286103539837" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">gNumberColor</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="510528763342523" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">gFirstX</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="954688038681645" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">gFirstY</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="446496104162882">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="226175797515423" type="System">
+                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>redefina o bloco para fonte</comment>
+                                        <event-block sid="190891017170475">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="402180120906070" type="System">
+                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;Completed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="232411990756577" type="System">
+                                                    <param id="0" name="Variable">gCountFonts</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="898946217493712">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="179474452519193" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                            <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">gNumberColor</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="717992826193714" type="lac_imgBlocks">
+                                                            <param id="0" name="Animation">&quot;Font&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="291944425784211" type="lac_imgBlocks">
+                                                            <param id="0" name="Frame number">gNumberColor</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>e exclui o caminho</comment>
+                                        <event-block sid="292597624562726">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="890260720071998" type="System">
+                                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">&quot;Ground&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="321177169486390">
+                                                    <conditions>
+                                                        <condition id="-33" name="Pick by comparison" sid="114697206104077" type="System">
+                                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                                            <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Value">gNumberColor</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="590810549966167" type="System">
+                                                            <param id="0" name="Variable">gMouseCondition</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="936084805448825" type="lac_imgBlocks">
+                                                            <param id="0" name="Animation">&quot;Ground&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="929543063032826" type="lac_imgBlocks">
+                                                            <param id="0" name="Frame number">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="396743982302352" type="System">
+                                                            <param id="0" name="Variable">gNumberColor</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="896239280171791" type="System">
+                                                            <param id="0" name="Variable">gMouseCondition</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="106733934310412" type="System">
+                                                            <param id="0" name="Variable">gNumberColor</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>após clicar, atualiza o número de blocos brancos</comment>
+                <event-block sid="957105636577085">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="979071521911113" type="System">
+                            <param id="0" name="Object">lac_imgBlocks</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="436621649642175" type="System">
+                            <param id="0" name="Variable">gWhiteBlocks</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="310752802199554">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="818505562548566" type="System">
+                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                    <param id="1" name="Expression">lac_imgBlocks.AnimationFrame</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="855287296437243" type="System">
+                                    <param id="0" name="Object">lac_imgBlocks</param>
+                                    <param id="1" name="Expression">lac_imgBlocks.AnimationName</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">&quot;Ground&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="877741038062237">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="590814918985747" type="System">
+                                            <param id="0" name="Object">lac_imgBlocks</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="184718722842916" type="System">
+                                            <param id="0" name="Variable">gWhiteBlocks</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Caso já tenha pego alguma core coloque o mouse em cima do chão</comment>
+        <event-block sid="860145446958150">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="872667983597087" type="Mouse">
+                    <param id="0" name="Object">lac_imgBlocks</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="246888726878753" type="System">
+                    <param id="0" name="Variable">gMouseCondition</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Verifica a posição do bloco caso seja branco e chão</comment>
+                <event-block sid="819980968449636">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="925757230692606" type="lac_imgBlocks">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="768640548304032" type="lac_imgBlocks">
+                            <param id="0" name="Animation">&quot;Ground&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Caso a posição do bloco novo seja adjacente ao anterior, colore</comment>
+                        <event-block sid="957392622665351">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="610107804693623" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">gGetBlockPositionX + 64</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="953786250091172" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="647532316774567" type="lac_imgBlocks">
+                                    <param id="0" name="Frame number">gNumberColor</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="135397372065810" type="System">
+                                    <param id="0" name="Variable">gLastColoredBlock</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="651488438661792" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionX</param>
+                                    <param id="1" name="Value">lac_imgBlocks.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="470606951701140" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionY</param>
+                                    <param id="1" name="Value">lac_imgBlocks.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="955233089538540">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="856208209491399" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">gGetBlockPositionX - 64</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="930018585643393" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="233750652418880" type="lac_imgBlocks">
+                                    <param id="0" name="Frame number">gNumberColor</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="303578919905574" type="System">
+                                    <param id="0" name="Variable">gLastColoredBlock</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="745859553646204" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionX</param>
+                                    <param id="1" name="Value">lac_imgBlocks.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="897386666425585" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionY</param>
+                                    <param id="1" name="Value">lac_imgBlocks.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="661042446111345">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="983255881112586" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">gGetBlockPositionX </param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="765628006062088" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY + 64</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="807349098683944" type="lac_imgBlocks">
+                                    <param id="0" name="Frame number">gNumberColor</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="956522013318295" type="System">
+                                    <param id="0" name="Variable">gLastColoredBlock</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="905226563953171" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionX</param>
+                                    <param id="1" name="Value">lac_imgBlocks.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="531225450717317" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionY</param>
+                                    <param id="1" name="Value">lac_imgBlocks.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="303730197133701">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="149580225967556" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">gGetBlockPositionX</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="243072294227965" type="lac_imgBlocks">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">gGetBlockPositionY - 64</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="907211225428466" type="lac_imgBlocks">
+                                    <param id="0" name="Frame number">gNumberColor</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="335156523370112" type="System">
+                                    <param id="0" name="Variable">gLastColoredBlock</param>
+                                    <param id="1" name="Value">lac_imgBlocks.AnimationFrame</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="736270913928477" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionX</param>
+                                    <param id="1" name="Value">lac_imgBlocks.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="385331387517894" type="System">
+                                    <param id="0" name="Variable">gGetBlockPositionY</param>
+                                    <param id="1" name="Value">lac_imgBlocks.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>A todo segundo realiza uma ação</comment>
+        <event-block sid="281923193297877">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="541402907934545" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="345638973018956" type="lac_txtMouseState">
+                    <param id="0" name="Text">&quot;Estado do Mouse: &quot;&amp;gMouseCondition</param>
+                </action>
+                <action id="0" name="Set text" sid="917228853605626" type="lac_txtBlockX">
+                    <param id="0" name="Text">&quot;X: &quot;&amp;gGetBlockPositionX</param>
+                </action>
+                <action id="0" name="Set text" sid="197748882690334" type="lac_txtBlockY">
+                    <param id="0" name="Text">&quot;Y: &quot;&amp;gGetBlockPositionY</param>
+                </action>
+                <action id="0" name="Set text" sid="254103330585190" type="lac_txtLastColor">
+                    <param id="0" name="Text">&quot;Última Cor: &quot;&amp;gLastColoredBlock</param>
+                </action>
+                <action id="0" name="Set text" sid="646064014443951" type="lac_txtWhiteBlocks">
+                    <param id="0" name="Text">&quot;Blocos Brancos: &quot;&amp;gWhiteBlocks</param>
+                </action>
+                <action id="0" name="Set text" sid="714888306327826" type="lac_txtCounterFont">
+                    <param id="0" name="Text">&quot;Fontes: &quot;&amp;gCountFonts</param>
+                </action>
+                <action id="0" name="Set text" sid="474014973136943" type="lac_txtScore">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;gScore</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Dependendo da cor, o estilo do mouse muda</comment>
+                <event-block sid="879960860044200">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="692336952606309" type="System">
+                            <param id="0" name="Variable">gNumberColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="522463194279716" type="System">
+                            <param id="0" name="Variable">gTextColor</param>
+                            <param id="1" name="Value">&quot;• Branco&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="534830612977487">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="340159950429244" type="System">
+                            <param id="0" name="Variable">gNumberColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="302967195180374" type="System">
+                            <param id="0" name="Variable">gTextColor</param>
+                            <param id="1" name="Value">&quot;• Vermelho&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="473804593989984">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="289665617716794" type="System">
+                            <param id="0" name="Variable">gNumberColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="348413804903022" type="System">
+                            <param id="0" name="Variable">gTextColor</param>
+                            <param id="1" name="Value">&quot;• Azul&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="826131639155345">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="239213398099639" type="System">
+                            <param id="0" name="Variable">gNumberColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="260986100979583" type="System">
+                            <param id="0" name="Variable">gTextColor</param>
+                            <param id="1" name="Value">&quot;• Verde&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500568134305959">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="941471583624220" type="System">
+                            <param id="0" name="Variable">gNumberColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="146221703727979" type="System">
+                            <param id="0" name="Variable">gTextColor</param>
+                            <param id="1" name="Value">&quot;• Amarelo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915341829049606">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="533401966058316" type="System">
+                            <param id="0" name="Variable">gNumberColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="884102138418478" type="System">
+                            <param id="0" name="Variable">gTextColor</param>
+                            <param id="1" name="Value">&quot;• Roxo&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="300680750595106">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="578927651020774" type="System">
+                            <param id="0" name="Variable">gMouseCondition</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="903632052091929" type="lac_imgCursor">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="602083565327037" type="lac_imgCursor">
+                            <param id="0" name="Frame number">gNumberColor</param>
+                        </action>
+                        <action id="0" name="Set cursor style" sid="241240504340576" type="Mouse">
+                            <param id="0" name="Cursor style">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="231801474265362">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="581872573262879" type="System">
+                            <param id="0" name="Variable">gMouseCondition</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="858086618138019" type="lac_imgCursor">
+                            <param id="0" name="X">-50</param>
+                            <param id="1" name="Y">-50</param>
+                        </action>
+                        <action id="0" name="Set cursor style" sid="861959684347401" type="Mouse">
+                            <param id="0" name="Cursor style">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="777956290776345">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="406531127883256" type="lac_imgConnected">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="146015247887391" type="lac_imgConnected" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Condição para caso o usuário ganhe</comment>
+        <event-block sid="182931601835451">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="330971394859954" type="System">
+                    <param id="0" name="Variable">gWhiteBlocks</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="328061899323387" type="System">
+                    <param id="0" name="Variable">gCountFonts</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-32" name="Set layer effect parameter" sid="273197059086811" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="2" name="Parameter index">0</param>
+                    <param id="3" name="Value">50</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="247015773011900" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="2" name="Parameter index">0</param>
+                    <param id="3" name="Value">50</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="495240569653393" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="2" name="Parameter index">0</param>
+                    <param id="3" name="Value">50</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="528258494201963" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="832008223089919">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="126408823897970" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="227680137246224">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="822613733772498" type="lac_btnMudar">
+                            <param id="0" name="Animation">&quot;On&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="271323428547466" type="lac_imgGameBackground">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="947830547504861">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="613085420850631" type="lac_btnMudar">
+                            <param id="0" name="Animation">&quot;Off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="471816399824369" type="lac_imgGameBackground">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="568666119431406">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="396827952763861" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">lac_btnMudar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="386995345796100">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="419644381906734" type="lac_btnMudar">
+                            <param id="0" name="Animation">&quot;On&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="892909934382588" type="lac_btnMudar">
+                            <param id="0" name="Animation">&quot;Off&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="442615992277985">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="509326992774591" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="774898082388366" type="lac_btnMudar">
+                            <param id="0" name="Animation">&quot;On&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

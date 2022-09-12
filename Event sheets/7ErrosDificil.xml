@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>7ErrosDificil</name>
+    <events>
+        <event-block sid="476792590837170">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="450956656434864" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="942241055708329" type="System">
+                    <param id="0" name="Width">880</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="877218277592674" title="Desktop2">
+            <sub-events>
+                <event-block sid="864155947399325">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="517529484684469" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="323884177847565" type="Pontos">
+                            <param id="0" name="Text">&quot;Pontos.pontuacao&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="182786857322537">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="206464124149116" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">LixoE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="692400320010776" type="LixoE" />
+                        <action id="-11" name="Add to" sid="366054002324304" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="865949100735415">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="189875767778043" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CaixaLapisE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="932724763619269" type="CaixaLapisE" />
+                        <action id="-11" name="Add to" sid="608340213096555" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="238910363647428">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="711456606848406" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">LapisE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="947112447339051" type="LapisE" />
+                        <action id="-11" name="Add to" sid="386026965356365" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="683124478691210">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="221171576686731" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">LivroE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="844706570676043" type="LivroE" />
+                        <action id="-11" name="Add to" sid="801061862166123" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="662130711657712">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="958973309885160" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">MarteloE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="884604128577110" type="MarteloE" />
+                        <action id="-11" name="Add to" sid="976369242765268" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245240003829564">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="207487513562221" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">RelogioE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="989437316332467" type="RelogioE" />
+                        <action id="-11" name="Add to" sid="373590855306092" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="656657219987044">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="551405634348480" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CuboE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="201435989205176" type="CuboE" />
+                        <action id="-11" name="Add to" sid="539159594469453" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456825170363848">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="797944143018263" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CaixaE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="383630018328139" type="CaixaE" />
+                        <action id="-11" name="Add to" sid="209304194407355" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="109664760716522">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="285849061024116" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">TelefoneE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="607201742003734" type="TelefoneE" />
+                        <action id="-11" name="Add to" sid="489976264330173" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="602273567956153">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="178227808234082" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Tesoura</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="924209940351440" type="Tesoura" />
+                        <action id="-11" name="Add to" sid="834730621191753" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="624678804137158" title="Mobile2">
+            <sub-events>
+                <event-block sid="342313218864430">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="916473852276064" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="969772556447861" type="Pontos">
+                            <param id="0" name="Text">&quot;Pontos.pontuacao&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="221278235367060">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="173047510289557" type="Touch">
+                            <param id="0" name="Object">LapisE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="749698331505097" type="LapisE" />
+                        <action id="-11" name="Add to" sid="196199008636663" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="454315321045580">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="438431194901134" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">LivroE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="637447504823499" type="LivroE" />
+                        <action id="-11" name="Add to" sid="147078223820252" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="417992737284281">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="823015171303547" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">MarteloE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="181037017093380" type="MarteloE" />
+                        <action id="-11" name="Add to" sid="171169665472197" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="737685037307603">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="847118012410386" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">RelogioE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="359007536733864" type="RelogioE" />
+                        <action id="-11" name="Add to" sid="503852192376520" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="145783962344505">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="476507857733750" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CuboE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="274122209918904" type="CuboE" />
+                        <action id="-11" name="Add to" sid="932509015498999" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="450573954670224">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="606968481017486" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CaixaLapisE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="771470916347728" type="CaixaLapisE" />
+                        <action id="-11" name="Add to" sid="636871916138585" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="721164680010504">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="904009813329343" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">CaixaE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="848461682051849" type="CaixaE" />
+                        <action id="-11" name="Add to" sid="995571531878759" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="406837085501017">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="783000272837539" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">LixoE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="176920690310088" type="LixoE" />
+                        <action id="-11" name="Add to" sid="127616477209647" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="821541723667020">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="923491093124364" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">TelefoneE</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="191389262656251" type="TelefoneE" />
+                        <action id="-11" name="Add to" sid="266157786486977" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="835873130921831">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="154049256878125" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Tesoura</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="325842348545809" type="Tesoura" />
+                        <action id="-11" name="Add to" sid="811922471943024" type="Pontos">
+                            <param id="0" name="Instance variable">pontuacao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="556401919484512">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="986509813824742" type="Pontos">
+                    <param id="0" name="Instance variable">pontuacao</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="244952438584518" type="System">
+                    <param id="0" name="Object to create">Popup</param>
+                    <param id="1" name="Layer">&quot;Erros&quot;</param>
+                    <param id="2" name="X">436</param>
+                    <param id="3" name="Y">238</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="187422397251654">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="658786358436414" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btnConfig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="136331247399704" type="System">
+                    <param id="0" name="Layout">&quot;Configurações&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="121665345750706">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="782969322465350" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btnMenu7ErrosDificil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="860058969555662" type="System">
+                    <param id="0" name="Layout">&quot;EscolhaDeJogoAlmoxarife&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

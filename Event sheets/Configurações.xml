@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Configurações</name>
+    <events>
+        <event-block sid="438119757953925">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="433691051720767" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="887616578359996" type="System">
+                    <param id="0" name="Width">880</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="339845631214667">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="564081351423899" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">LegOff</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="583930259792129" type="LegOff" />
+                <action id="-3" name="Create object" sid="701962270363641" type="System">
+                    <param id="0" name="Object to create">LegOn</param>
+                    <param id="1" name="Layer">&quot;botões&quot;</param>
+                    <param id="2" name="X">153</param>
+                    <param id="3" name="Y">338</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593155114369640">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="237611378964275" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">LegOn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="863318777502624" type="LegOn" />
+                <action id="-3" name="Create object" sid="886247131391996" type="System">
+                    <param id="0" name="Object to create">LegOff</param>
+                    <param id="1" name="Layer">&quot;botões&quot;</param>
+                    <param id="2" name="X">153</param>
+                    <param id="3" name="Y">338</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

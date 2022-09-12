@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EscolhaDeJogoAlmoxarife</name>
+    <events>
+        <event-block sid="253350642494858">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="764424603246418" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="971013748589713" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="382081247503663">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="470252357048335" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="459974187699298" type="System">
+                    <param id="0" name="Layout">&quot;Almoxarife-7ErrosFacil&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="302862368824598">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="732095897622560" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite41</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="424479372642165" type="System">
+                    <param id="0" name="Layout">&quot;Amoxarife-OrganizandoItens&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="738269333919765">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="576780338081934" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite19</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="400482266160847" type="System">
+                    <param id="0" name="Layout">&quot;0Jogodamemoria&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="283912334086694">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="276220753665510" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="524137937916214" type="System">
+                    <param id="0" name="Layout">&quot;0ligueascores - d&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815409175083648">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="166083142358083" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite21</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="372204742120170" type="System">
+                    <param id="0" name="Layout">&quot;Almoxarife-AtendendoClientes&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="851734375135317">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="816206842767243" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">clickrecolher</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="777029185002876" type="System">
+                    <param id="0" name="Layout">&quot;recolher-objetos&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="476199215226083">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="258838194812177" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">proxtela</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="385983995967448" type="System">
+                    <param id="0" name="Layout">&quot;EscolhadeJogoAlmoxarife1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

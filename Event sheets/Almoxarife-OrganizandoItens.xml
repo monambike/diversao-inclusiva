@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Almoxarife-OrganizandoItens</name>
+    <events>
+        <event-block sid="560510374143959">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="721745753701885" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="928883982247558" type="System">
+                    <param id="0" name="Width">880</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771577741659780">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="285775879990513" type="ciaxaLapiz1">
+                    <param id="0" name="Object">Sprite24</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="779830856539403" type="Sprite24">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Itens&quot;</param>
+                    <param id="2" name="Image point">&quot;Sprite24&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="420706370069413" type="ciaxaLapiz1" />
+            </actions>
+        </event-block>
+        <event-block sid="759717581455525">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="903733466963383" type="Sprite28">
+                    <param id="0" name="Object">VoltarAtendendoCli</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="101899127700941" type="VoltarAtendendoCli">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Itens&quot;</param>
+                    <param id="2" name="Image point">&quot;Sprite23&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="257889699447467" type="Sprite28" />
+            </actions>
+        </event-block>
+        <event-block sid="754722979796253">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="383386318403297" type="martelo1">
+                    <param id="0" name="Object">Sprite25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="175019942928257" type="Sprite25">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Itens&quot;</param>
+                    <param id="2" name="Image point">&quot;Sprite25&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="798064623985771" type="martelo1" />
+            </actions>
+        </event-block>
+        <event-block sid="994272272610772">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="791934831202076" type="Sprite33">
+                    <param id="0" name="Object">Sprite26</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="977632699688480" type="Sprite26">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">&quot;Itens&quot;</param>
+                    <param id="2" name="Image point">&quot;Sprite26&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="225905770307765" type="Sprite33" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>0JogodaVelha</name>
+    <events>
+        <event-block sid="991660945769885">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="396692276629417" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="516080715976801" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action id="-9" name="Set value" sid="665176200296585" type="System">
+                    <param id="0" name="Variable">gForm1</param>
+                    <param id="1" name="Value">round(random(1,5))</param>
+                </action>
+                <action id="-9" name="Set value" sid="572304550257731" type="System">
+                    <param id="0" name="Variable">gForm2</param>
+                    <param id="1" name="Value">round(random(1,5))</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Define uma forma para cada jogador aleatoriamente</comment>
+                <event-block sid="397010345628679">
+                    <conditions>
+                        <condition id="-23" name="While" sid="502913173005766" type="System" />
+                        <condition id="-14" name="Compare variable" sid="314041129094993" type="System">
+                            <param id="0" name="Variable">gForm1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">gForm2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="750226432900635" type="System">
+                            <param id="0" name="Variable">gForm2</param>
+                            <param id="1" name="Value">round(random(1,5))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="492935477979176">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="821220901474044" type="jdv_imgBoard">
+                            <param id="0" name="Unique ID">414</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="643709563329051" type="jdv_imgBoard">
+                            <param id="0" name="Frame number">gForm1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="795046801935357">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="254839877010172" type="jdv_imgBoard">
+                            <param id="0" name="Unique ID">415</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="527384448630365" type="jdv_imgBoard">
+                            <param id="0" name="Frame number">gForm2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Caso o jogo não tenha sido ganho ainda</comment>
+        <event-block sid="397476722865370">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="735872656344952" type="System">
+                    <param id="0" name="Variable">gWin</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Caso o jogador 1</comment>
+                <event-block sid="367677331709349">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="191380237984891" type="System">
+                            <param id="0" name="Variable">gPlayer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>clique na mesa não alterada ele troca de jogador e muda o frame</comment>
+                        <event-block sid="505652689446416">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="140007402340491" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">jdv_imgBoard</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="366214852690461" type="jdv_imgBoard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="614203415504913" type="jdv_imgBoard">
+                                    <param id="0" name="Frame number">gForm1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="445575444084494" type="System">
+                                    <param id="0" name="Variable">gPlayer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Caso o jogador 2</comment>
+                <event-block sid="496412464793709">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="225510847734617" type="System">
+                            <param id="0" name="Variable">gPlayer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>clique na mesa não alterada ele troca de jogador e muda o frame</comment>
+                        <event-block sid="675817735689673">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="879041955932347" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">jdv_imgBoard</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="870682996338240" type="jdv_imgBoard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="577389324092755" type="jdv_imgBoard">
+                                    <param id="0" name="Frame number">gForm2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="233740747189583" type="System">
+                                    <param id="0" name="Variable">gPlayer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Mostra de quem é a vez</comment>
+        <event-block sid="148990329101202">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="839323246686445" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="343040757531763" type="jdx_txtTest">
+                    <param id="0" name="Text">gForm1&amp;newline&amp;gForm2&amp;newline</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="505263453772722" type="jdv_btnChange">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;Snap ITC&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="425967664801478" type="jdv_btnChange">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;20pt&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="647205315354407">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="443865966552702" type="System">
+                            <param id="0" name="Variable">gPlayer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="135493785983697" type="jdv_txtPlayer">
+                            <param id="0" name="Text">&quot;Vez do Jogador 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="983741531986538">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="600610550061872" type="System">
+                            <param id="0" name="Variable">gPlayer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="136648775266998" type="jdv_txtPlayer">
+                            <param id="0" name="Text">&quot;Vez do Jogador 2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="313650993280452" title="Condições de Vitória">
+            <sub-events>
+                <event-block sid="390602024960301">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="990613757740175" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>A todo momento define para as variáveis o frame que receberam</comment>
+                        <event-block sid="537948298376988">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="978829672973936" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">405</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="162642703322687" type="System">
+                                    <param id="0" name="Variable">House1</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="647197330840204">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="775291266402145" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">406</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="410093433936489" type="System">
+                                    <param id="0" name="Variable">House2</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918625099796140">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="886670691107142" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">407</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="361679284503356" type="System">
+                                    <param id="0" name="Variable">House3</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="399881824963544">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="357093901190350" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">408</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="495107995380836" type="System">
+                                    <param id="0" name="Variable">House4</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="230086777950400">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="489880042014942" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">409</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="113931276972541" type="System">
+                                    <param id="0" name="Variable">House5</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="876347612156202">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="559659225661044" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">410</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="640811191626798" type="System">
+                                    <param id="0" name="Variable">House6</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="999733118655515">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="267269430189438" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">411</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="475552268691836" type="System">
+                                    <param id="0" name="Variable">House7</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137004209440869">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="419405597775378" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">412</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="434503573383844" type="System">
+                                    <param id="0" name="Variable">House8</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="216038899106725">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="883337195659403" type="jdv_imgBoard">
+                                    <param id="0" name="Unique ID">413</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="828267479368649" type="System">
+                                    <param id="0" name="Variable">House9</param>
+                                    <param id="1" name="Value">jdv_imgBoard.AnimationFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-group description="" sid="250944764094682" title="Jogador 1">
+                            <sub-events>
+                                <comment>Horizontal</comment>
+                                <comment>Primeira Linha</comment>
+                                <event-block sid="188973248866692">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="641085030092625" type="System">
+                                            <param id="0" name="Variable">House1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="213283149140527" type="System">
+                                            <param id="0" name="Variable">House2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="404839892000145" type="System">
+                                            <param id="0" name="Variable">House3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="169056963710551">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="539196862457040" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">437</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="951685627206572" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="281549888437304" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Segunda Linha</comment>
+                                <event-block sid="489969567506953">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="679721800304241" type="System">
+                                            <param id="0" name="Variable">House4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="790937107176328" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="962314692365114" type="System">
+                                            <param id="0" name="Variable">House6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="694581650017351">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="888349010816147" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">438</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="300745307194772" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="420957978694253" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Terceira Linha</comment>
+                                <event-block sid="878702162570022">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="397646447657920" type="System">
+                                            <param id="0" name="Variable">House7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="905387040335999" type="System">
+                                            <param id="0" name="Variable">House8</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="434263881979403" type="System">
+                                            <param id="0" name="Variable">House9</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="147852219299210">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="725271610115544" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">439</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="808208922359712" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="113425531592305" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Vertical</comment>
+                                <comment>Primeira Linha</comment>
+                                <event-block sid="791191049223740">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="802661782865290" type="System">
+                                            <param id="0" name="Variable">House1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="558439205020518" type="System">
+                                            <param id="0" name="Variable">House4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="410009825652832" type="System">
+                                            <param id="0" name="Variable">House7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="989234876399449">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="881046184979303" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">440</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="353599299711954" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="578497607048523" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Segunda Linha</comment>
+                                <event-block sid="116665793469103">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="541849306823514" type="System">
+                                            <param id="0" name="Variable">House2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="188603554132059" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="981221964052879" type="System">
+                                            <param id="0" name="Variable">House8</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="878621505881210">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="505532368137958" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">441</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="412548415203482" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="364729671399570" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Terceira Linha</comment>
+                                <event-block sid="632414538075088">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="513674998503621" type="System">
+                                            <param id="0" name="Variable">House3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="950553376397188" type="System">
+                                            <param id="0" name="Variable">House6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="718879827790712" type="System">
+                                            <param id="0" name="Variable">House9</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="424612267738375">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="381587118073730" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">442</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="292661912249292" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="836895634113269" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Diagonal</comment>
+                                <comment>Primeira Linha</comment>
+                                <event-block sid="692447400960042">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="368093062789584" type="System">
+                                            <param id="0" name="Variable">House1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="313914073394086" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="833271458969635" type="System">
+                                            <param id="0" name="Variable">House9</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="301799308019189">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="117048506291630" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">443</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="857679136034043" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="861180425882950" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Segunda Linha</comment>
+                                <event-block sid="400082661107935">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="614045468285978" type="System">
+                                            <param id="0" name="Variable">House3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="496851839336503" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="169668907262281" type="System">
+                                            <param id="0" name="Variable">House7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="774698620504699">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="514229257368900" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">444</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="902266400021080" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="263472103991474" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="410888157897004" title="Jogador 2">
+                            <sub-events>
+                                <comment>Horizontal</comment>
+                                <comment>Primeira Linha</comment>
+                                <event-block sid="369144747935753">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="214934835396388" type="System">
+                                            <param id="0" name="Variable">House1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="595545561016022" type="System">
+                                            <param id="0" name="Variable">House2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="777133805583644" type="System">
+                                            <param id="0" name="Variable">House3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="989990265880727">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="526817307387031" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">437</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="419922262315345" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="796191550892540" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Segunda Linha</comment>
+                                <event-block sid="993191468160867">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="259073814494321" type="System">
+                                            <param id="0" name="Variable">House4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="531133828857149" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="412553550928130" type="System">
+                                            <param id="0" name="Variable">House6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="567575841715649">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="723778932671228" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">438</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="755899384283392" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="765546086951584" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Terceira Linha</comment>
+                                <event-block sid="588893130663893">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="637750443937079" type="System">
+                                            <param id="0" name="Variable">House7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="314861799096314" type="System">
+                                            <param id="0" name="Variable">House8</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="512690165858017" type="System">
+                                            <param id="0" name="Variable">House9</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="930391033725518">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="965727510248128" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">439</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="278729032749518" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="540898657536216" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Vertical</comment>
+                                <comment>Primeira Linha</comment>
+                                <event-block sid="381994491269012">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="234514232488708" type="System">
+                                            <param id="0" name="Variable">House1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="872491921337700" type="System">
+                                            <param id="0" name="Variable">House4</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="989717279055485" type="System">
+                                            <param id="0" name="Variable">House7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="522862608726016">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="983893606083786" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">440</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="850139674267241" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="775665315490506" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Segunda Linha</comment>
+                                <event-block sid="714774489548984">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="843922787780615" type="System">
+                                            <param id="0" name="Variable">House2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="926378922140912" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="549051199085860" type="System">
+                                            <param id="0" name="Variable">House8</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="806611089127029">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="687228377515158" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">441</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="416094772076090" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="912334896701273" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Terceira Linha</comment>
+                                <event-block sid="781956779282345">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="335869023813293" type="System">
+                                            <param id="0" name="Variable">House3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="295147792689281" type="System">
+                                            <param id="0" name="Variable">House6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="365585784333469" type="System">
+                                            <param id="0" name="Variable">House9</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="179323548253149">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="133985998212393" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">442</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="703595293281757" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="415794423447358" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Diagonal</comment>
+                                <comment>Primeira Linha</comment>
+                                <event-block sid="768630626236610">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="515488633879313" type="System">
+                                            <param id="0" name="Variable">House1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="489183286820032" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="768395635649013" type="System">
+                                            <param id="0" name="Variable">House9</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="650257336665751">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="980621696535036" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">443</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="575482635170447" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="600759516215570" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Segunda Linha</comment>
+                                <event-block sid="593832618439249">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="623793862828795" type="System">
+                                            <param id="0" name="Variable">House3</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="151637263373373" type="System">
+                                            <param id="0" name="Variable">House5</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="373267489796093" type="System">
+                                            <param id="0" name="Variable">House7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gForm2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="845661126355475">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="634553586389868" type="jdv_txtLine">
+                                                    <param id="0" name="Unique ID">444</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="293253880563745" type="jdv_txtLine">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="267136913812848" type="System">
+                                                    <param id="0" name="Variable">gWin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="654689970435871" title="Mudar Cor">
+            <sub-events>
+                <comment>Caso o jogo não tenha sido ganho</comment>
+                <event-block sid="634237763484854">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="985156509218118" type="System">
+                            <param id="0" name="Variable">gWin</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Jogador 1</comment>
+                        <event-block sid="347946430998893">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="196361262917110" type="jdv_btnChange">
+                                    <param id="0" name="Unique ID">435</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="768773347839099">
+                                    <conditions>
+                                        <condition id="0" name="On clicked" sid="357723868282783" type="jdv_btnChange" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="147541426482177" type="System">
+                                            <param id="0" name="Variable">gOldForm</param>
+                                            <param id="1" name="Value">gForm1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="673707469795275" type="System">
+                                            <param id="0" name="Variable">gForm1</param>
+                                            <param id="1" name="Value">round(random(1,5))</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="871454966545440">
+                                            <conditions>
+                                                <condition id="-23" name="While" sid="474417664867184" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="568628874344911" type="System">
+                                                    <param id="0" name="Variable">gForm1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">gForm2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="416606632673409" type="System">
+                                                    <param id="0" name="Variable">gForm1</param>
+                                                    <param id="1" name="Value">round(random(1,5))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="756253605830332">
+                                            <conditions>
+                                                <condition id="-23" name="While" sid="813864499532205" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="665129151463132" type="System">
+                                                    <param id="0" name="Variable">gForm1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">gOldForm</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="283890338576949" type="System">
+                                                    <param id="0" name="Variable">gForm1</param>
+                                                    <param id="1" name="Value">round(random(1,5))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="343923030458848">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="461972409934863" type="jdv_imgBoard">
+                                                    <param id="0" name="Unique ID">414</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="966931814502450" type="jdv_imgBoard">
+                                                    <param id="0" name="Frame number">gForm1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="599902708459352">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="858270221818271" type="System">
+                                                    <param id="0" name="Object">jdv_imgBoard</param>
+                                                    <param id="1" name="Expression">jdv_imgBoard.AnimationFrame</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">gOldForm</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="806702377500755" type="jdv_imgBoard">
+                                                    <param id="0" name="Frame number">gForm1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Jogador 2</comment>
+                        <event-block sid="619076669229145">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="779815900639181" type="jdv_btnChange">
+                                    <param id="0" name="Unique ID">436</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="163186871540367">
+                                    <conditions>
+                                        <condition id="0" name="On clicked" sid="697519658691637" type="jdv_btnChange" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="579731829353665" type="System">
+                                            <param id="0" name="Variable">gOldForm</param>
+                                            <param id="1" name="Value">gForm2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="346356165947679" type="System">
+                                            <param id="0" name="Variable">gForm2</param>
+                                            <param id="1" name="Value">round(random(1,5))</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="636250008516519">
+                                            <conditions>
+                                                <condition id="-23" name="While" sid="238509381998724" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="313221338916300" type="System">
+                                                    <param id="0" name="Variable">gForm1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">gForm2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="106611560470874" type="System">
+                                                    <param id="0" name="Variable">gForm2</param>
+                                                    <param id="1" name="Value">round(random(1,5))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="683841114835215">
+                                            <conditions>
+                                                <condition id="-23" name="While" sid="177685626704971" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="280275040022156" type="System">
+                                                    <param id="0" name="Variable">gForm2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">gOldForm</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="842586977997989" type="System">
+                                                    <param id="0" name="Variable">gForm2</param>
+                                                    <param id="1" name="Value">round(random(1,5))</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="499337819474644">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="418752491028563" type="jdv_imgBoard">
+                                                    <param id="0" name="Unique ID">415</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="874791230403436" type="jdv_imgBoard">
+                                                    <param id="0" name="Frame number">gForm2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="962755072256232">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="739365341070538" type="System">
+                                                    <param id="0" name="Object">jdv_imgBoard</param>
+                                                    <param id="1" name="Expression">jdv_imgBoard.AnimationFrame</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">gOldForm</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="545651589239959" type="jdv_imgBoard">
+                                                    <param id="0" name="Frame number">gForm2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

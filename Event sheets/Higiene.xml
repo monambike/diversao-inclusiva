@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Higiene</name>
+    <events>
+        <comment>Garante que as hitbox estejam invisíveis</comment>
+        <event-block sid="228719937612540">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="138960629359547" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="554625551471331" type="hb_hitboxMouth">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="873502893499450" type="hb_hitboxToothPaste">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="989818641607676" type="hb_imgHandle">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action id="0" name="Set text" sid="466627294224168" type="hb_txtInfo">
+                    <param id="0" name="Text">&quot;SUJEIRA: &quot;&amp;gDirty&amp;&quot;%&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="681780552560455" type="hb_imgLightSwitch">
+                    <param id="0" name="Frame number">gLightOn</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="127087123635416">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="980227661522438" type="System">
+                            <param id="0" name="Variable">gFaucet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="720987030539867" type="hb_imgFaucet">
+                            <param id="0" name="Animation">&quot;Off&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="321207562698859">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="402005594611690" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="510943254726203" type="hb_imgFaucet">
+                            <param id="0" name="Animation">&quot;On&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Define a opacidade dos dentes de acordo com a variavel</comment>
+                <event-block sid="334347700293581">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="165112155156887" type="hb_imgBlocks">
+                            <param id="0" name="Animation">&quot;Teeth&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="769146815326422" type="hb_imgBlocks">
+                            <param id="0" name="Opacity">gDirty</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Luz Desligada</comment>
+                <event-block sid="220994818515491">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="185386409952794" type="System">
+                            <param id="0" name="Variable">gLightOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-32" name="Set layer effect parameter" sid="454893778533404" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">40</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="738847584875252" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Luz Ligada</comment>
+                <event-block sid="689745463737459">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="206024908124681" type="System">
+                            <param id="0" name="Variable">gLightOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-32" name="Set layer effect parameter" sid="954988413228733" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">100</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="779073911487906" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="222792331478784">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="467777412475385" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="346826272614926" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="535843220583819" type="hb_imgDuck">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="378378310558428" title="Gênero">
+            <sub-events>
+                <comment>Gênero</comment>
+                <event-block sid="797643851267815">
+                    <conditions>
+                        <condition id="0" name="On click" sid="136282067570760" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="891981418825466">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="384626266625200" type="System">
+                                    <param id="0" name="Variable">gGender</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="115123233558854" type="System">
+                                    <param id="0" name="Variable">gGender</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="285495182088770">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="277258424131958" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="505499162522025" type="System">
+                                    <param id="0" name="Variable">gGender</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="179831502054498">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="106489172726376" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Menina</comment>
+                        <event-block sid="972994190333945">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="458469197215939" type="System">
+                                    <param id="0" name="Variable">gGender</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="683740787432398" type="hb_imgPerson">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="304460492386656" type="hb_hitboxMouth">
+                                    <param id="0" name="X">320</param>
+                                    <param id="1" name="Y">768</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="406811573858293">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="499637077495445" type="hb_imgBlocks">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">1</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="256808781374674" type="hb_imgBlocks">
+                                            <param id="0" name="Animation">&quot;Skin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="938792719237639" type="hb_imgBlocks">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Menino</comment>
+                        <event-block sid="969989876170627">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="870158758874996" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="646806646823798" type="hb_imgPerson">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="165421727451332" type="hb_hitboxMouth">
+                                    <param id="0" name="X">320</param>
+                                    <param id="1" name="Y">640</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="457026622490548">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="572854812752912" type="hb_imgBlocks">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="105125837466499" type="hb_imgBlocks">
+                                            <param id="0" name="Animation">&quot;Skin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="941757965209794" type="hb_imgBlocks">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Faz o pato se mover na banheira</comment>
+        <event-block sid="291225399415208">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="629529318324583" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="130335504111856">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="854705059889704" type="hb_imgDuck" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="881964424495590" type="hb_imgDuck">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424017822287082">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="766258009855675" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="617712627917916" type="hb_imgDuck">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Muda o tamanho da tela caso o usuário esteja escovando os dentes e ajusta escova</comment>
+        <event-block sid="825522203495914">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="205760432368988" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Caso não esteja escovando</comment>
+                <event-block sid="925161820778536">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="349027829161058" type="System">
+                            <param id="0" name="Variable">gBrushing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="192090058715993" type="hb_imgHandle">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="875716486664408" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Caso esteja escovando ajusta a escova e a pasta</comment>
+                <event-block sid="138672810535663">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="196320178016676" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="221704067043855" type="hb_imgHandle">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="227158940797128" type="System">
+                            <param id="0" name="Width">1000</param>
+                            <param id="1" name="Height">500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="669715041096472" type="hb_imgToothBrush">
+                            <param id="0" name="X">hb_imgHandle.X - 288</param>
+                            <param id="1" name="Y">hb_imgHandle.Y + 32</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="959542265809803" type="hb_hitboxToothPaste">
+                            <param id="0" name="X">hb_imgToothBrush.X + 19</param>
+                            <param id="1" name="Y">hb_imgToothBrush.Y - 110</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Garante que a escova não saia do layout</comment>
+                <event-block sid="585374131820007">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="101792998411094" type="hb_imgHandle" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="524409312744761" type="hb_imgHandle">
+                            <param id="0" name="X">384</param>
+                            <param id="1" name="Y">416</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="958843330572225" title="Mudar Layout">
+            <sub-events>
+                <comment>Caso esteja no banheiro, não esteja escovando os dentes e a torneira esteja ligada, vai para o layout dentes</comment>
+                <event-block sid="587031164823402">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="992792267722372" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">hb_hitboxMouth</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="525950044220324" type="System">
+                            <param id="0" name="Variable">gBrushing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="971521292467732" type="System">
+                            <param id="0" name="Variable">gFaucet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="921813775743502" type="System">
+                            <param id="0" name="Variable">gBrushing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="622981011378305" type="System">
+                            <param id="0" name="Layout">0HigieneDentes</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Caso esteja escovando os dentes, vai para o banheiro</comment>
+                <event-block sid="499095276603607">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="940561085094662" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">hb_btnReturn</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="784413995071623" type="System">
+                            <param id="0" name="Variable">gBrushing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="457426191926441" type="System">
+                            <param id="0" name="Variable">gBrushing</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="436967972251805" type="System">
+                            <param id="0" name="Layout">0HigieneBanheiro</param>
+                        </action>
+                        <action id="-28" name="Set canvas size" sid="375583425200262" type="System">
+                            <param id="0" name="Width">1920</param>
+                            <param id="1" name="Height">1080</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="531373154705228" title="Torneira">
+            <sub-events>
+                <comment>Interagir com a torneira</comment>
+                <event-block sid="495750597115370">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="740785670779118" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">hb_imgFaucet</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="646609366828115" type="System">
+                            <param id="0" name="Variable">gLightOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="438232731268817">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="822021410930544" type="System">
+                                    <param id="0" name="Variable">gFaucet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="510164574548191" type="hb_imgFaucet">
+                                    <param id="0" name="Animation">&quot;On&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="694119915021669" type="System">
+                                    <param id="0" name="Variable">gFaucet</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="470237528681024">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="278653968929654" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="932697830580117" type="hb_imgFaucet">
+                                    <param id="0" name="Animation">&quot;Off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="393104923552620" type="System">
+                                    <param id="0" name="Variable">gFaucet</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Garante que a animação da torneira não falhe</comment>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="186971321644743" title="Escovando Dentes">
+            <sub-events>
+                <comment>Enquanto estiver com a escova na mao</comment>
+                <event-block sid="535314260297798">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="372083323545579" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="397333160100274" type="Mouse">
+                            <param id="0" name="Object">hb_imgHandle</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>E a pasta estiver encostando nos dentes</comment>
+                        <event-block sid="292401736434701">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="284231294997655" type="hb_hitboxToothPaste">
+                                    <param id="0" name="Object">hb_imgBlocks</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="623144936496220">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="213167541423163" type="hb_imgBlocks">
+                                            <param id="0" name="Animation">&quot;Teeth&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="421666269875278" type="System">
+                                            <param id="0" name="Variable">gDirty</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="771976178476313">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="596451231647891" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Subtract from" sid="356792065801129" type="System">
+                                                    <param id="0" name="Variable">gDirty</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="625369916709580" type="System">
+                                                    <param id="0" name="Object to create">hb_imgBubbles</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="X">hb_hitboxToothPaste.X</param>
+                                                    <param id="3" name="Y">hb_hitboxToothPaste.Y</param>
+                                                </action>
+                                                <action id="9" name="Set scale" sid="966202569423752" type="hb_imgBubbles">
+                                                    <param id="0" name="Scale">random(0.3,0.8)</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="582077734640487" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="116130883576857" type="hb_imgBubbles" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="851979213561649" title="Luz">
+            <sub-events>
+                <event-block sid="130223170112167">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="138433690239040" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">hb_imgLightSwitch</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="861212953678633" type="System">
+                            <param id="0" name="Variable">gFaucet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="268077471743984">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="133268562309289" type="System">
+                                    <param id="0" name="Variable">gLightOn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="422548715467979" type="System">
+                                    <param id="0" name="Variable">gLightOn</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="701602112041946">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="741491652427629" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="755584233896275" type="System">
+                                    <param id="0" name="Variable">gLightOn</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="520409961128914" title="Vitória2">
+            <sub-events>
+                <event-block sid="982227980610012">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="773611131701773" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="451318906262478">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="126840259698123" type="System">
+                                    <param id="0" name="Variable">gLightOn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="219843393984626" type="System">
+                                    <param id="0" name="Variable">gFaucet</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="667953895971289" type="System">
+                                    <param id="0" name="Variable">gDirty</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

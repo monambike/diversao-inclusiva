@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global</name>
+    <events>
+        <variable comment="0=False 1=True" constant="0" name="gMinimized" sid="199506448623487" static="0" type="number">0</variable>
+        <variable comment="0=Fácil 1=Difícil" constant="0" name="gDifficult" sid="204795125887718" static="0" type="number">1</variable>
+        <variable constant="0" name="gRandom" sid="139950293228172" static="0" type="number">0</variable>
+        <comment>&#x0D;&#x0A;Jogo da Memória&#x0D;&#x0A;</comment>
+        <comment>Layout: Aqui são definidas margens, largura, altura, numero de linhas e colunas, quantidades de cartas e espaços entre as cartas</comment>
+        <variable constant="0" name="gMarginTop" sid="799209626935545" static="0" type="number">0</variable>
+        <variable constant="0" name="gMarginLeft" sid="873059099632890" static="0" type="number">0</variable>
+        <variable constant="0" name="gCardWidth" sid="999030674581756" static="0" type="number">0</variable>
+        <variable constant="0" name="gCardHeight" sid="405043080254111" static="0" type="number">0</variable>
+        <variable comment="2=Fácil 4=Difícil" constant="0" name="gNumberRows" sid="607709600826011" static="0" type="number">4</variable>
+        <variable comment="3=Fácil 4=Difícil" constant="0" name="gNumberColumns" sid="754386942680838" static="0" type="number">4</variable>
+        <variable constant="0" name="gNumberCards" sid="656285566847158" static="0" type="number">0</variable>
+        <variable constant="0" name="gSpaceBetweenCards" sid="149290771418035" static="0" type="number">5</variable>
+        <comment>Configurações: Aqui é definido o número de vezes que serão embaralhadas as cartas e tempo de espera</comment>
+        <variable constant="0" name="gRepeatCards" sid="723156757165414" static="0" type="number">50</variable>
+        <variable constant="0" name="gWaitSeconds" sid="548135100562289" static="0" type="number">3</variable>
+        <comment>Gameplay: Mecânica para virar as cartas&#x0D;&#x0A;&#x0D;&#x0A;gFirstCardFrame e gSecondCardFrame precisam ser diferentes para que seja possível clicar, por padrão coloquei um como -1 e o outro como -2</comment>
+        <variable constant="0" name="gCardsCountPicked" sid="416987261570359" static="0" type="number">0</variable>
+        <variable constant="0" name="gFirstCardFrame" sid="102814401607383" static="0" type="number">-1</variable>
+        <variable constant="0" name="gSecondCardFrame" sid="799433881692951" static="0" type="number">-2</variable>
+        <comment>Score: Sistema de Pontuação</comment>
+        <variable constant="0" name="gMatches" sid="466243896481308" static="0" type="number">0</variable>
+        <variable constant="0" name="gScore" sid="849101331140642" static="0" type="number">0</variable>
+        <variable constant="0" name="gValuesPoints" sid="662530906312658" static="0" type="number">10</variable>
+        <comment>&#x0D;&#x0A;Ligue as Cores&#x0D;&#x0A;</comment>
+        <comment>Dados: Aqui há contadores e dados importantes</comment>
+        <variable constant="0" name="gMouseCondition" sid="555890383234633" static="0" type="number">0</variable>
+        <variable constant="0" name="gLastColoredBlock" sid="802458814042744" static="0" type="number">0</variable>
+        <variable constant="0" name="gNumberColor" sid="488547095031108" static="0" type="number">0</variable>
+        <variable constant="0" name="gWhiteBlocks" sid="487554930242377" static="0" type="number">0</variable>
+        <variable constant="0" name="gCountFonts" sid="237133860235842" static="0" type="number">0</variable>
+        <comment>Posições: Posições de blocos </comment>
+        <variable constant="0" name="gGetBlockPositionX" sid="350158547814643" static="0" type="number">0</variable>
+        <variable constant="0" name="gGetBlockPositionY" sid="897645700840524" static="0" type="number">0</variable>
+        <variable constant="0" name="gFirstX" sid="700465902603634" static="0" type="number">0</variable>
+        <variable constant="0" name="gFirstY" sid="138768289744854" static="0" type="number">0</variable>
+        <comment>Nomes das Cores: Aqui definem-se os nomes das cores de acordo com os frames</comment>
+        <variable constant="0" name="gTextColor" sid="374732149561765" static="0" type="text"></variable>
+        <comment>&#x0D;&#x0A;Entrada e Saída&#x0D;&#x0A;</comment>
+        <variable constant="0" name="gAdjust" sid="516430958252518" static="0" type="number">0</variable>
+        <variable constant="0" name="gValAdjust" sid="994092508944555" static="0" type="number">0</variable>
+        <variable constant="0" name="gInitialValue" sid="675122403284650" static="0" type="number">0</variable>
+        <variable comment="0 para entrada 1 para saída" constant="0" name="gTypeofAdjust" sid="518293001533037" static="0" type="number">0</variable>
+        <variable constant="0" name="gCounter" sid="517701444600903" static="0" type="number">0</variable>
+        <comment>&#x0D;&#x0A;Cálculo com Frutas&#x0D;&#x0A;</comment>
+        <variable constant="0" name="gValFruit1" sid="115715734648760" static="0" type="number">0</variable>
+        <variable constant="0" name="gValFrut2" sid="786041403900822" static="0" type="number">0</variable>
+        <variable constant="0" name="gValFrut3" sid="634696849279115" static="0" type="number">0</variable>
+        <variable constant="0" name="gLastNumber" sid="764598775500759" static="0" type="number">0</variable>
+        <comment>&#x0D;&#x0A;Jogo da Velha&#x0D;&#x0A;</comment>
+        <variable constant="0" name="gPlayer" sid="237535952074672" static="0" type="number">0</variable>
+        <variable constant="0" name="gForm1" sid="895290276975006" static="0" type="number">0</variable>
+        <variable constant="0" name="gForm2" sid="923215936643836" static="0" type="number">0</variable>
+        <variable constant="0" name="House1" sid="858297834312802" static="0" type="number">0</variable>
+        <variable constant="0" name="House2" sid="859391075807780" static="0" type="number">0</variable>
+        <variable constant="0" name="House3" sid="651985621130856" static="0" type="number">0</variable>
+        <variable constant="0" name="House4" sid="810053114356405" static="0" type="number">0</variable>
+        <variable constant="0" name="House5" sid="902000902696956" static="0" type="number">0</variable>
+        <variable constant="0" name="House6" sid="997277845647072" static="0" type="number">0</variable>
+        <variable constant="0" name="House7" sid="667639099574385" static="0" type="number">0</variable>
+        <variable constant="0" name="House8" sid="430318921707913" static="0" type="number">0</variable>
+        <variable constant="0" name="House9" sid="709923109414770" static="0" type="number">0</variable>
+        <variable constant="0" name="gOldForm" sid="474145302240535" static="0" type="number">0</variable>
+        <variable constant="0" name="gWin" sid="404156155642680" static="0" type="number">0</variable>
+        <comment>&#x0D;&#x0A;Memorize A Cor&#x0D;&#x0A;</comment>
+        <variable constant="0" name="gGameSequence" sid="831001293378808" static="0" type="text"></variable>
+        <variable constant="0" name="gPlayerSequence" sid="408047474799854" static="0" type="text"></variable>
+        <variable constant="0" name="gNextColor" sid="278961116070990" static="0" type="number">0</variable>
+        <variable constant="0" name="gRound" sid="382508013991629" static="0" type="number">0</variable>
+        <variable constant="0" name="gClick" sid="137702590841115" static="0" type="number">0</variable>
+        <variable constant="0" name="gWait" sid="359241002211291" static="0" type="number">0</variable>
+        <variable constant="0" name="gPart" sid="587091605716598" static="0" type="text"></variable>
+        <variable constant="0" name="gLife" sid="574979940765100" static="0" type="number">2</variable>
+        <variable constant="0" name="gTime" sid="462372759197010" static="0" type="number">0</variable>
+        <variable constant="0" name="gteste" sid="340103797052792" static="0" type="text"></variable>
+        <comment>&#x0D;&#x0A;Higiene&#x0D;&#x0A;</comment>
+        <variable comment="0=False 1=True" constant="0" name="gBrushing" sid="500674140196582" static="0" type="number">0</variable>
+        <variable comment="0=False 1=True" constant="0" name="gFaucet" sid="246888849525800" static="0" type="number">0</variable>
+        <variable constant="0" name="gDirty" sid="670397768956506" static="0" type="number">100</variable>
+        <variable comment="0=Girl 1=Boy" constant="0" name="gGender" sid="886803184468611" static="0" type="number">0</variable>
+        <variable comment="0=False 1=True" constant="0" name="gLightOn" sid="436707348826361" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

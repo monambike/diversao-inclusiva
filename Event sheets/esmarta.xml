@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esmarta</name>
+    <events>
+        <event-block sid="469558270472876">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="855851804829945" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="765192071020857" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="760674628781893" type="heroanm6">
+                    <param id="0" name="Pin to">hero6</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="580197195116453" type="hero6">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="610637248292763" type="heroanm6">
+                    <param id="0" name="X">hero6.X</param>
+                    <param id="1" name="Y">hero6.Y</param>
+                </action>
+                <action id="4" name="Set animation" sid="188477051421866" type="heroanm6">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="436282630329382" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="308833964275165" type="hero6">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="100020084985179" type="System">
+                    <param id="0" name="Seconds">4.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="118273234845068" type="heroanm6">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="199725795361270" type="hero6">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="734511473940812" type="jmporta">
+                    <param id="0" name="Animation">&quot;abrindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="557478448752138" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="521515276374491" type="heroanm6">
+                    <param id="0" name="Layer">4</param>
+                </action>
+                <action id="-16" name="Wait" sid="221106117497297" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="857047356822719" type="heroanm6">
+                    <param id="0" name="Animation">&quot;frente&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="650590472655940" type="hero6">
+                    <param id="0" name="Gravity">120</param>
+                </action>
+                <action id="-9" name="Destroy" sid="447994035814691" type="chao6" />
+                <action id="-16" name="Wait" sid="417770187333302" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="684303791542484" type="jmporta">
+                    <param id="0" name="Animation">&quot;fechando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="9" name="Set scale" sid="771542958788264" type="heroanm6">
+                    <param id="0" name="Scale">8</param>
+                </action>
+                <action id="-16" name="Wait" sid="544640623784291" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="9" name="Set scale" sid="368579486593285" type="heroanm6">
+                    <param id="0" name="Scale">9</param>
+                </action>
+                <action id="-16" name="Wait" sid="478042641160316" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="9" name="Set scale" sid="164777530150319" type="heroanm6">
+                    <param id="0" name="Scale">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="490093349203770" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="9" name="Set scale" sid="254199140824813" type="heroanm6">
+                    <param id="0" name="Scale">11</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="677401545996332" type="hero6">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="811543360509473" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="4" name="Set animation" sid="216236866791435" type="heroanm6">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="210141190290533" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="413107988082116" type="ballon">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="109731806261155" type="perg1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="245481122087099" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="730080935703558" type="System">
+                    <param id="0" name="Object to create">br1</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">320.006</param>
+                    <param id="3" name="Y">1010.634</param>
+                </action>
+                <action id="-15" name="Set visible" sid="786394949970148" type="textrep1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="375408871174955" type="System">
+                    <param id="0" name="Object to create">br2</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">960.006</param>
+                    <param id="3" name="Y">1010.634</param>
+                </action>
+                <action id="-15" name="Set visible" sid="780154235437092" type="textrep2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="924117677169229" type="System">
+                    <param id="0" name="Object to create">br3</param>
+                    <param id="1" name="Layer">5</param>
+                    <param id="2" name="X">1600.006</param>
+                    <param id="3" name="Y">1010.634</param>
+                </action>
+                <action id="-15" name="Set visible" sid="769272908780487" type="textrep3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="258222463681641">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="852316011011020" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">br1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="621542539978850" type="br1" />
+                <action id="-15" name="Set visible" sid="494441863556061" type="errado1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="892959771203890" type="textrep1" />
+            </actions>
+        </event-block>
+        <event-block sid="527458504691351">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="524308842698192" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">br3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="420013790342786" type="br3" />
+                <action id="-15" name="Set visible" sid="217602320130819" type="errado3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="417983634816481" type="textrep3" />
+            </actions>
+        </event-block>
+        <event-block sid="199380080073449">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="484256166529434" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">br2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="946646077860207" type="br2" />
+                <action id="-3" name="Set position" sid="666302672764108" type="jmblock">
+                    <param id="0" name="X">960.006</param>
+                    <param id="1" name="Y">1010.634</param>
+                </action>
+                <action id="-9" name="Destroy" sid="876163430432901" type="br1" />
+                <action id="-9" name="Destroy" sid="311992896099794" type="br3" />
+                <action id="-9" name="Destroy" sid="972068834694088" type="textrep1" />
+                <action id="-9" name="Destroy" sid="661062104958094" type="textrep3" />
+                <action id="-15" name="Set visible" sid="512441199306210" type="certo2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="505051332175213" type="errado1" />
+                <action id="-9" name="Destroy" sid="381449899034790" type="errado3" />
+                <action id="-16" name="Wait" sid="182522970968337" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="586421746420713" type="certo2" />
+                <action id="-15" name="Set visible" sid="702185574694881" type="ballon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="745189234208315" type="jmblock" />
+                <action id="-9" name="Destroy" sid="633450025986763" type="textrep2" />
+                <action id="-9" name="Destroy" sid="997084028425413" type="perg1" />
+                <action id="-16" name="Wait" sid="577427379558715" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="433331883594793" type="ballon2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="907365601771013" type="resp1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="830064475344059" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="720926752861942" type="perg2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="731846192712137" type="ballon2" />
+                <action id="-15" name="Set visible" sid="983004942281021" type="ballon">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="911111317534275" type="resp1" />
+                <action id="-16" name="Wait" sid="688247281474214" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="611360653960552" type="ballon">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="937941730475837" type="perg2" />
+                <action id="-16" name="Wait" sid="453445976468955" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="186972518063307" type="hero6">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="262612762071415" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="854801783427870" type="hero6">
+                    <param id="0" name="Gravity">-60</param>
+                </action>
+                <action id="4" name="Set animation" sid="680354722932571" type="heroanm6">
+                    <param id="0" name="Animation">&quot;virado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="400427502221901" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Set scale" sid="167489667755498" type="heroanm6">
+                    <param id="0" name="Scale">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="757377335941629" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="9" name="Set scale" sid="680326541778795" type="heroanm6">
+                    <param id="0" name="Scale">9</param>
+                </action>
+                <action id="-16" name="Wait" sid="212973367381958" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="9" name="Set scale" sid="160811582047405" type="heroanm6">
+                    <param id="0" name="Scale">8</param>
+                </action>
+                <action id="-16" name="Wait" sid="599948385621185" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="293896931921642" type="heroanm6">
+                    <param id="0" name="Scale">7</param>
+                </action>
+                <action id="-16" name="Wait" sid="525407083222911" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="9" name="Set scale" sid="715226079912479" type="heroanm6">
+                    <param id="0" name="Scale">6</param>
+                </action>
+                <action id="-16" name="Wait" sid="208413551947520" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="4" name="Set animation" sid="779437723114763" type="jmporta">
+                    <param id="0" name="Animation">&quot;abrindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="910932662090345" type="System">
+                    <param id="0" name="Seconds">0.7</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="454190777207707" type="hero6">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="775966648362766" type="heroanm6">
+                    <param id="0" name="Layer">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="344412041831111" type="heroanm6">
+                    <param id="0" name="Animation">&quot;viradoparado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="622461075323353" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="687117688538814" type="hero6">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="412879348259689" type="heroanm6">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="140609980910579" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="4" name="Set animation" sid="140449825338677" type="jmporta">
+                    <param id="0" name="Animation">&quot;fechando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="738576759630658" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="826248454191219" type="heroanm6" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

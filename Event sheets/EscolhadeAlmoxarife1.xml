@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EscolhadeAlmoxarife1</name>
+    <events>
+        <event-block sid="729209972196275">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="251891799580918" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="347439784786248" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="830987775556788">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="248040719454523" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">escplat</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="967703286084097" type="System">
+                    <param id="0" name="Layout">&quot;almoxarife-plataforma&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="928454499104494">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="924963810626118" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">proxtela</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="276361573660468" type="System">
+                    <param id="0" name="Layout">&quot;recolher-objetos&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

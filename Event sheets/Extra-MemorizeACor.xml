@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Extra-MemorizeACor</name>
+    <events>
+        <event-block sid="518025198458774">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="790738026942671" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="218829942597432" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action id="-9" name="Set value" sid="665347642044148" type="System">
+                    <param id="0" name="Variable">gNextColor</param>
+                    <param id="1" name="Value">round(random(0,3))</param>
+                </action>
+                <action id="-10" name="Add to" sid="500539668353127" type="System">
+                    <param id="0" name="Variable">gRound</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="784261496800207" type="System">
+                    <param id="0" name="Variable">gCounter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="567907359237755" type="System">
+                    <param id="0" name="Variable">gWait</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="386733114525769" type="mac_imgBackground">
+                    <param id="0" name="Frame number">round(random(0,4))</param>
+                </action>
+                <action id="5" name="Set frame" sid="148484255914077" type="mac_imgColor">
+                    <param id="0" name="Frame number">round(random(0,5))</param>
+                </action>
+                <action id="5" name="Set frame" sid="657600840673852" type="mac_imgAttention">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="696792803104054" type="mac_txtAttention">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Adiciona para a sequencia do jogo</comment>
+                <event-block sid="686004722735229">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="638779970793571" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="810449813773066" type="System">
+                            <param id="0" name="Variable">gGameSequence</param>
+                            <param id="1" name="Value">&quot;B&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="761076229105701">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="552202825762971" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="118231963470567" type="System">
+                            <param id="0" name="Variable">gGameSequence</param>
+                            <param id="1" name="Value">&quot;R&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="447577134017094">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="244151669185088" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="533352178144766" type="System">
+                            <param id="0" name="Variable">gGameSequence</param>
+                            <param id="1" name="Value">&quot;Y&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="882094014085529">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="653335915790036" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="611344452969958" type="System">
+                            <param id="0" name="Variable">gGameSequence</param>
+                            <param id="1" name="Value">&quot;G&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Acende de acordo com a sequencia (copiar do outro dps)</comment>
+                <event-block sid="508046219595772">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="488977275808036" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="455601053279690" type="System">
+                            <param id="0" name="Variable">gteste</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="123494714398502" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="949650247959465" type="System">
+                            <param id="0" name="Variable">gWait</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="271865195661742" type="mac_imgAttention">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="291122078680847" type="mac_txtAttention">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Quando clicar, define o frame na variável</comment>
+        <event-block sid="572812961663751">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="120178914562776" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">mac_imgGameColor</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="717717181489694" type="System">
+                    <param id="0" name="Variable">gWait</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="272032630859096" type="System">
+                    <param id="0" name="Variable">gWait</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="555277648413034" type="System">
+                    <param id="0" name="Variable">gNextColor</param>
+                    <param id="1" name="Value">mac_imgGameColor.AnimationFrame</param>
+                </action>
+                <action id="5" name="Set frame" sid="422635026390001" type="mac_imgGameColor">
+                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame + 4</param>
+                </action>
+                <action id="-16" name="Wait" sid="290428309153107" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="405277808163878" type="mac_imgGameColor">
+                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame - 4</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="299290528941250" type="System">
+                    <param id="0" name="Variable">gWait</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="791259509409061" type="System">
+                    <param id="0" name="Variable">gClick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>E adiciona pra sequencia do jogador</comment>
+                <event-block sid="293305304124225">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="317467552979006" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="441828145777645" type="System">
+                            <param id="0" name="Variable">gPlayerSequence</param>
+                            <param id="1" name="Value">&quot;B&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="958522884856478">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="349093774631217" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="977352940394124" type="System">
+                            <param id="0" name="Variable">gPlayerSequence</param>
+                            <param id="1" name="Value">&quot;R&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="402851535811991">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="551151268621218" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="919176042724873" type="System">
+                            <param id="0" name="Variable">gPlayerSequence</param>
+                            <param id="1" name="Value">&quot;Y&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="186356455431159">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="214579253129196" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="595182004010364" type="System">
+                            <param id="0" name="Variable">gPlayerSequence</param>
+                            <param id="1" name="Value">&quot;G&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Quando os cliques se igualarem a qntd de nmr na sequencia ele apaga os cliques e confere</comment>
+                <event-block sid="249348902456060">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="633805249676930" type="System">
+                            <param id="0" name="Variable">gClick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">gRound</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Se estiver certo continua a sequência e apaga a do jogador</comment>
+                        <event-block sid="234239082444575">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="845499138545757" type="System">
+                                    <param id="0" name="Variable">gGameSequence</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">gPlayerSequence</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="124767426219667" type="System">
+                                    <param id="0" name="Variable">gNextColor</param>
+                                    <param id="1" name="Value">round(random(0,3))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="624949865890724" type="System">
+                                    <param id="0" name="Variable">gPlayerSequence</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="787836278384678" type="System">
+                                    <param id="0" name="Variable">gWait</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="754225014520186" type="mac_imgAttention">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="952227539213621" type="mac_txtAttention">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>E cria mais outra para o jogo</comment>
+                                <event-block sid="656122123568814">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="979023052315089" type="System">
+                                            <param id="0" name="Variable">gNextColor</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="389025562274275" type="System">
+                                            <param id="0" name="Variable">gGameSequence</param>
+                                            <param id="1" name="Value">&quot;B&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="960397587253502">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="503669637493029" type="System">
+                                            <param id="0" name="Variable">gNextColor</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="980980554230995" type="System">
+                                            <param id="0" name="Variable">gGameSequence</param>
+                                            <param id="1" name="Value">&quot;R&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="264422862700438">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="143125657972308" type="System">
+                                            <param id="0" name="Variable">gNextColor</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="271386954801247" type="System">
+                                            <param id="0" name="Variable">gGameSequence</param>
+                                            <param id="1" name="Value">&quot;Y&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="419197343867480">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="247259287397258" type="System">
+                                            <param id="0" name="Variable">gNextColor</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="294834781976841" type="System">
+                                            <param id="0" name="Variable">gGameSequence</param>
+                                            <param id="1" name="Value">&quot;G&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Acende de acordo com a nova sequencia e depois permite o usuário clicar novamente</comment>
+                                <event-block sid="705123695090264">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="545064096222206" type="System">
+                                            <param id="0" name="Variable">gRound</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="596959694092251" type="System">
+                                            <param id="0" name="Variable">gClick</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="622990273274670" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="811721830097109" type="System">
+                                            <param id="0" name="Variable">gteste</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="374598625877450" type="System">
+                                            <param id="0" name="Variable">gCounter</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="976959859817322" type="System">
+                                            <param id="0" name="Seconds">1 * gRound</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="276486646221749" type="System">
+                                            <param id="0" name="Variable">gWait</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="181900741853569" type="mac_imgAttention">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="685451239180226" type="mac_txtAttention">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Se estiver errado tira uma vida e apaga a sequencia do jogador</comment>
+                        <event-block sid="916631105901347">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="998721107599023" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="972105494302880" type="System">
+                                    <param id="0" name="Variable">gLife</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Toda vez q clicar</comment>
+                <event-block sid="385646559149598">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="420256862665798" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>verifica se esta no caminho certo, se não estiver recomeça</comment>
+                        <event-block sid="911306990080661">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="116833304732611" type="System">
+                                    <param id="0" name="First value">mid(gPlayerSequence,gClick-1,1)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">mid(gGameSequence,gClick-1,1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="264438333009714" type="System">
+                                    <param id="0" name="Variable">gWait</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="248473569722121" type="mac_imgAttention">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="517864260218420" type="mac_txtAttention">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="443559459469500" type="System">
+                                    <param id="0" name="Variable">gCounter</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="760647360890310" type="System">
+                                    <param id="0" name="Variable">gLife</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="538452919799693" type="System">
+                                    <param id="0" name="Variable">gPlayerSequence</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="247959581550406" type="System">
+                                    <param id="0" name="Variable">gClick</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="803585726250439" type="System">
+                                    <param id="0" name="Seconds">1 * gRound</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="944343917337700" type="System">
+                                    <param id="0" name="Variable">gWait</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="277421493016736" type="mac_imgAttention">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="738549948165413" type="mac_txtAttention">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="993316691263328">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="903585123922679" type="System">
+                    <param id="0" name="Variable">gCounter</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="329776281976226">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="991270328342227" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="653032060781041" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="396827612789409">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="314635881736494" type="System">
+                                    <param id="0" name="First value">mid(gGameSequence,gCounter,1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;B&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="793247220376964" type="mac_imgGameColor">
+                                    <param id="0" name="Unique ID">531</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="372211979317876" type="System">
+                                    <param id="0" name="Variable">gteste</param>
+                                    <param id="1" name="Value">&quot;B&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="781566046252808" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame + 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="178874663099974" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="856718210805555" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame - 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="236665093745182" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="919936249944879">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="674223419599526" type="System">
+                                    <param id="0" name="First value">mid(gGameSequence,gCounter,1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;R&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="673656309089402" type="mac_imgGameColor">
+                                    <param id="0" name="Unique ID">532</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="679508991645230" type="System">
+                                    <param id="0" name="Variable">gteste</param>
+                                    <param id="1" name="Value">&quot;R&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="139647525406871" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame + 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="940545035840328" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="384524552848330" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame - 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="195025494636624" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="377837125573961">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="254996086782482" type="System">
+                                    <param id="0" name="First value">mid(gGameSequence,gCounter,1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Y&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="337274110514318" type="mac_imgGameColor">
+                                    <param id="0" name="Unique ID">535</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="460790060752422" type="System">
+                                    <param id="0" name="Variable">gteste</param>
+                                    <param id="1" name="Value">&quot;Y&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="919941257420860" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame + 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="177650096431968" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="594235340153542" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame - 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="146033272237290" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="432021233098825">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="805482084161206" type="System">
+                                    <param id="0" name="First value">mid(gGameSequence,gCounter,1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;G&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="623661264080304" type="mac_imgGameColor">
+                                    <param id="0" name="Unique ID">533</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="454159805071965" type="System">
+                                    <param id="0" name="Variable">gteste</param>
+                                    <param id="1" name="Value">&quot;G&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="613951174732092" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame + 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="400612064183373" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="270044356483690" type="mac_imgGameColor">
+                                    <param id="0" name="Frame number">mac_imgGameColor.AnimationFrame - 4</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="472233986489290" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="216556780478999">
+            <conditions>
+                <condition id="1" name="On any click" sid="336678110871402" type="Mouse" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="830104159367263">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="682172605394864" type="System">
+                            <param id="0" name="Variable">gLife</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="779809598842351" type="System" />
+                        <action id="-9" name="Set value" sid="886199972993774" type="System">
+                            <param id="0" name="Variable">gLife</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="936917104393241" type="System">
+                            <param id="0" name="Variable">gGameSequence</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="645421550333885" type="System">
+                            <param id="0" name="Variable">gPlayerSequence</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="344046762889805" type="System">
+                            <param id="0" name="Variable">gNextColor</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="483839303847453" type="System">
+                            <param id="0" name="Variable">gClick</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="793530484240444" type="System">
+                            <param id="0" name="Variable">gRound</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="187403363839107" type="System">
+                            <param id="0" name="Variable">gWait</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

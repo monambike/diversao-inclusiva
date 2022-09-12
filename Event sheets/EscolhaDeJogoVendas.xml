@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EscolhaDeJogoVendas</name>
+    <events>
+        <event-block sid="499022949380968">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="391362669696407" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="298683850001818" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="602140611942927">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="172571852767155" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite73</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="213976760238194" type="System">
+                    <param id="0" name="Layout">&quot;joao&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="794987089280235">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="744734567990079" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">escentrega</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="345558249214170" type="System">
+                    <param id="0" name="Layout">&quot;Vendas-EntregaItens&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

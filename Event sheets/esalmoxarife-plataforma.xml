@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esalmoxarife-plataforma</name>
+    <events>
+        <variable constant="0" name="checkpoint" sid="777226014908878" static="0" type="number">0</variable>
+        <event-block sid="176224532094917">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="787669684527365" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="926920053421947" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="149816926367575">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="597711811366214" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="589916379522658" type="jmheropt">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="649546180088268" type="jmherospritept">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="188287571182762" type="jmherospritept">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465972615837488">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="539576214265848" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="237467623161758" type="jmheropt">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="702108294367767" type="jmherospritept">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="711584771474739" type="jmherospritept">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="673471951372890">
+            <conditions>
+                <condition id="0" name="On click" sid="537483060243244" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="668517622785905" type="jmheropt">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="705075250364975" type="jmherospritept">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="867022850189026">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="824454830250867" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="238784245494636" type="jmherospritept">
+                    <param id="0" name="Pin to">jmheropt</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="248863030213655" type="jmarmariopt">
+                    <param id="0" name="Animation">&quot;prar&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="288799133431737" type="jmportaf1pt">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="837671807968184">
+            <conditions>
+                <condition behavior="Platform" id="1" name="Compare speed" sid="482431047325536" type="jmheropt">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="372500446823346" type="jmherospritept">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="778280161800198">
+                    <conditions>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="726550448685277" type="jmheropt">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="407288736104156">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="575000187724428" type="jmheropt" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="117488237306634">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="413748353903858" type="jmheropt" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="112232836788663" type="jmherospritept">
+                    <param id="0" name="Animation">&quot;caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="134937646553712">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="340376982673190" type="jmheropt" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="691747763593999">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="861439356605336" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="628644242798696" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;pulando&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="227486289006587" type="jmherospritept">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="876704074751225">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="486346291315567" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="780456716819720" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="282640448264767">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="882466594514689" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="244043371862819" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;caindo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="156054190792691">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="658373155950691" type="jmheropt">
+                    <param id="0" name="Object">jmativador</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="130608801335096" type="jmarmariopt">
+                    <param id="0" name="Animation">&quot;cai&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="253107763807094" type="jmativador" />
+            </actions>
+        </event-block>
+        <event-block sid="294849917278981">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="555457726851768" type="jmherospritept">
+                    <param id="0" name="Object">jmobj1pt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="414487332987486" type="jmobj1pt" />
+                <action id="-27" name="Set effect enabled" sid="514690170913052" type="jmcoletlapispt">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="990516193241447">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="236906699191793" type="jmherospritept">
+                    <param id="0" name="Object">jmobj2pt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="115547608880130" type="jmobj2pt" />
+                <action id="-27" name="Set effect enabled" sid="847881293546434" type="jmcoletchave">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="156881703819825">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="617703924646316" type="jmherospritept">
+                    <param id="0" name="Object">jmobj3pt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="544957886782126" type="jmobj3pt" />
+                <action id="-27" name="Set effect enabled" sid="426870469581022" type="jmcoletmartelo">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;AdjustHSL&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="706592651619473">
+            <conditions>
+                <condition behavior="Platform" id="1" name="Compare speed" sid="121549486152139" type="jmheropt">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Speed">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="165952665183471">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="470688010853741" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="954742179064173" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;pulando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="161292696369885" type="jmherospritept">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917981795285812">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="219554529070392" type="jmheropt">
+                            <param id="0" name="Object">jmchaofase</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="886901231646879" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="104757813473789">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="664046506066815" type="jmheropt">
+                            <param id="0" name="Object">jmcaixaplat</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="230585455190281" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="689115624816872">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="885876542051319" type="jmherospritept">
+                    <param id="0" name="Object">jmatvseta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="831931206997292" type="System">
+                    <param id="0" name="Object to create">jmativador1pt</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">6176.331</param>
+                    <param id="3" name="Y">696.682</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="458781760762318">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="169514975956714" type="jmatvplc">
+                    <param id="0" name="Object">jmheropt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="513911819298823" type="jmatvplc" />
+                <action id="-15" name="Set visible" sid="524037832981671" type="jmsetapt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="720161306541092" type="jmsetapt">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">3000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="894877483001897">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="754512565132965" type="jmplacaviso">
+                    <param id="0" name="Object">jmheropt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="818024134961465" type="jmtxtplacapt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="876025646646670">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="515306057627730" type="jmherospritept">
+                    <param id="0" name="Object">jmplacapt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="335032235826383" type="jmplacapt">
+                    <param id="0" name="Pin to">jmherospritept</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="200735078029736">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="923541323975932" type="jmherospritept">
+                    <param id="0" name="Object">jmativador1pt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="915442754688126" type="jmplacapt">
+                    <param id="0" name="X">jmaviso.X</param>
+                    <param id="1" name="Y">jmaviso.Y</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="750834142706541" type="jmplacapt" />
+                <action id="11" name="Set collisions enabled" sid="622054529136051" type="jmplacapt">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="744343471138313" type="jmtxtplacapt" />
+                <action id="7" name="Set mirrored" sid="626953531024934" type="jmsetapt">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="710534686993287" type="jmsetapt">
+                    <param id="0" name="X">6492</param>
+                    <param id="1" name="Y">689</param>
+                </action>
+                <action id="-16" name="Wait" sid="355215389695211" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="838602733818845" type="jmsetapt" />
+                <action id="-9" name="Destroy" sid="354709688526893" type="jmplacaviso" />
+                <action id="-3" name="Set position" sid="877330374985671" type="jmparedept">
+                    <param id="0" name="X">5773</param>
+                    <param id="1" name="Y"> 530.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136122746791721">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="424547328371232" type="jmheropt">
+                    <param id="0" name="Object">jmquedapt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="600861195174307" type="System">
+                    <param id="0" name="Object to create">jmchk</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">9269</param>
+                    <param id="3" name="Y"> 913</param>
+                </action>
+                <action id="-3" name="Set position" sid="300537600140605" type="jmheropt">
+                    <param id="0" name="X">9269</param>
+                    <param id="1" name="Y">913</param>
+                </action>
+                <action id="-15" name="Set visible" sid="705946244739872" type="jmherospritept">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="130278755102601" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="847228755229141" type="jmherospritept">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="114712538020411" type="jmherospritept">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="929852944399077">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="729727554558409" type="jmherospritept">
+                    <param id="0" name="Object">jmvirarpt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="388344163170620" type="jmheropt" />
+                <action id="-9" name="Destroy" sid="331607757101633" type="jmcoletlapispt" />
+                <action id="-9" name="Destroy" sid="998886503606790" type="jmcoletchave" />
+                <action id="-9" name="Destroy" sid="774900119095631" type="jmcoletmartelo" />
+                <action id="-9" name="Destroy" sid="483382372235392" type="jmherospritept" />
+                <action id="2" name="Stop" sid="378967549695401" type="jmherospritept" />
+                <action id="-3" name="Set position" sid="523577952177682" type="jmherof12">
+                    <param id="0" name="X">17532.369</param>
+                    <param id="1" name="Y">918.55</param>
+                </action>
+                <action id="-3" name="Set position" sid="930712873022884" type="jmvirado1pt">
+                    <param id="0" name="X">17509</param>
+                    <param id="1" name="Y">933</param>
+                </action>
+                <action id="4" name="Set animation" sid="522952053712482" type="jmvirado1pt">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="495772111848981" type="jmportaf1pt">
+                    <param id="0" name="Animation">&quot;abrindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="145398093136342" type="jmvirado1pt">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="211858880457671" type="System">
+                    <param id="0" name="Seconds">1.2</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="383739608885571" type="jmvirado1pt">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="715874156974956" type="jmvirado1pt" />
+                <action id="-16" name="Wait" sid="364083377094359" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="925955469721416" type="jmcaixapt" />
+                <action behavior="Fade" id="1" name="Start fade" sid="684768158739339" type="jmbck13" />
+                <action behavior="Fade" id="1" name="Start fade" sid="399427067388248" type="jmportaf1pt" />
+                <action id="-16" name="Wait" sid="265374094509768" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="852881905105782" type="System">
+                    <param id="0" name="Layout">&quot;esalmoxarife-plataforma&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="158955223728685">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="644201320808663" type="jmheropt">
+                    <param id="0" name="Object">jmpoca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="826473400548724" type="jmpoca" />
+                <action id="-15" name="Set visible" sid="261979558598985" type="jmcaido">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="209371602558312" type="jmherospritept">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="166605846709074" type="jmheropt">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="426358851146405" type="jmcaido">
+                    <param id="0" name="X">jmheropt.x</param>
+                    <param id="1" name="Y">jmpoca.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="319054383932213" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="702491542796341" type="jmtxtescorregadopt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="985798204846742" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="385335393764830" type="jmcaido" />
+                <action id="-15" name="Set visible" sid="718308175867580" type="jmherospritept">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="783157121022314" type="jmherospritept">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-16" name="Wait" sid="842659056913114" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="248328508702504" type="jmheropt">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="384565344037313" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="137810601880494" type="jmtxtescorregadopt" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

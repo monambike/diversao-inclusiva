@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>0EntradaeSaida</name>
+    <events>
+        <comment>Criação do Jogo</comment>
+        <event-block sid="411247261114816">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="828755575312984" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="632744775497924" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action id="-9" name="Set value" sid="988127014368790" type="System">
+                    <param id="0" name="Variable">gMinimized</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Fácil</comment>
+                <event-block sid="542677634174623">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="554836737523601" type="System">
+                            <param id="0" name="Variable">gDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="305845709459318" type="System">
+                            <param id="0" name="Variable">gAdjust</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="179562817399822" type="System">
+                            <param id="0" name="Variable">gInitialValue</param>
+                            <param id="1" name="Value">round(random(1,9))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="789287739599875" type="System">
+                            <param id="0" name="Variable">gInitialValue</param>
+                            <param id="1" name="Value">gInitialValue * 1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Difícil</comment>
+                <event-block sid="351117940185476">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="207547802622155" type="System">
+                            <param id="0" name="Variable">gDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="763635259447399" type="System">
+                            <param id="0" name="Variable">gAdjust</param>
+                            <param id="1" name="Value">round(random(3,4))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="309254972772136" type="System">
+                            <param id="0" name="Variable">gInitialValue</param>
+                            <param id="1" name="Value">round(random(10,99))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="195968486631834" type="System">
+                            <param id="0" name="Variable">gInitialValue</param>
+                            <param id="1" name="Value">gInitialValue * 1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="226418008834160">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="693408127052359" type="ees_txtTitle">
+                            <param id="0" name="Text">&quot;O saldo de uma certa empresa era: &quot;&amp;gInitialValue&amp;&quot; mas houveram alguns ajustes.&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="385075655697999" type="ees_txtQuestion">
+                            <param id="0" name="Text">&quot;Qual a quantidade de dinheiro que a empresa agora possui?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="233586138770591" type="ees_txtExercise">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="330230191289610" type="ees_imgBackground">
+                            <param id="0" name="Frame number">round(random(0,ees_imgBackground.AnimationFrameCount))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Fácil</comment>
+        <event-block sid="709545055807826">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="226587653952148" type="System">
+                    <param id="0" name="Variable">gDifficult</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Cria de 3 a 4 ajustes</comment>
+                <event-block sid="365428972055088">
+                    <conditions>
+                        <condition id="-23" name="While" sid="126051752423871" type="System" />
+                        <condition id="-14" name="Compare variable" sid="479229448361821" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">gAdjust</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="813676460305668" type="System">
+                            <param id="0" name="Variable">gValAdjust</param>
+                            <param id="1" name="Value">round(random(1,9))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="698711370679339" type="System">
+                            <param id="0" name="Variable">gValAdjust</param>
+                            <param id="1" name="Value">gValAdjust * 100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="151972916226923" type="System">
+                            <param id="0" name="Variable">gTypeofAdjust</param>
+                            <param id="1" name="Value">round(random(0,1))</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="378676423019196" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Caso seja uma entrada</comment>
+                        <event-block sid="478842091214410">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="740756985553973" type="System">
+                                    <param id="0" name="Variable">gTypeofAdjust</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="407054599840569" type="System">
+                                    <param id="0" name="Variable">gInitialValue</param>
+                                    <param id="1" name="Value">gInitialValue + gValAdjust</param>
+                                </action>
+                                <action id="1" name="Append text" sid="747035443176947" type="ees_txtExercise">
+                                    <param id="0" name="Text">newline&amp;newline&amp;&quot;Entrada: &quot;&amp;gValAdjust</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Caso seja uma saída</comment>
+                        <event-block sid="865996398143576">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="405931343679174" type="System">
+                                    <param id="0" name="Variable">gTypeofAdjust</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="152030772536879" type="System">
+                                    <param id="0" name="Variable">gValAdjust</param>
+                                    <param id="1" name="Value">gValAdjust - 2 * gValAdjust</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="240876533662084" type="System">
+                                    <param id="0" name="Variable">gInitialValue</param>
+                                    <param id="1" name="Value">gInitialValue + gValAdjust</param>
+                                </action>
+                                <action id="1" name="Append text" sid="887177847304613" type="ees_txtExercise">
+                                    <param id="0" name="Text">newline&amp;newline&amp;&quot;Saída: &quot;&amp;gValAdjust</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Difícil</comment>
+        <event-block sid="916149468019940">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="896199153915600" type="System">
+                    <param id="0" name="Variable">gDifficult</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Cria de 3 a 4 ajustes</comment>
+                <event-block sid="387947391150109">
+                    <conditions>
+                        <condition id="-23" name="While" sid="202450257892503" type="System" />
+                        <condition id="-14" name="Compare variable" sid="427542178458519" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">gAdjust</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="706994904808648" type="System">
+                            <param id="0" name="Variable">gValAdjust</param>
+                            <param id="1" name="Value">round(random(1,90))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="632199180489070" type="System">
+                            <param id="0" name="Variable">gValAdjust</param>
+                            <param id="1" name="Value">gValAdjust * 100</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="325335231523273" type="System">
+                            <param id="0" name="Variable">gTypeofAdjust</param>
+                            <param id="1" name="Value">round(random(0,1))</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="227670286186323" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Caso seja uma entrada</comment>
+                        <event-block sid="258308711558423">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="364623277681080" type="System">
+                                    <param id="0" name="Variable">gTypeofAdjust</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="265857893337801" type="System">
+                                    <param id="0" name="Variable">gInitialValue</param>
+                                    <param id="1" name="Value">gInitialValue + gValAdjust</param>
+                                </action>
+                                <action id="1" name="Append text" sid="108723628529676" type="ees_txtExercise">
+                                    <param id="0" name="Text">newline&amp;newline&amp;&quot;Entrada: &quot;&amp;gValAdjust</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Caso seja uma saída</comment>
+                        <event-block sid="985384245097923">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="412697035898726" type="System">
+                                    <param id="0" name="Variable">gTypeofAdjust</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="487526940428976" type="System">
+                                    <param id="0" name="Variable">gValAdjust</param>
+                                    <param id="1" name="Value">gValAdjust - 2 * gValAdjust</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="405076265865261" type="System">
+                                    <param id="0" name="Variable">gInitialValue</param>
+                                    <param id="1" name="Value">gInitialValue + gValAdjust</param>
+                                </action>
+                                <action id="1" name="Append text" sid="936621173639494" type="ees_txtExercise">
+                                    <param id="0" name="Text">newline&amp;newline&amp;&quot;Saída: &quot;&amp;gValAdjust</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Conferir resposta</comment>
+        <event-block sid="314371607504077">
+            <conditions>
+                <condition id="0" name="On clicked" sid="457200832329763" type="ees_btnConfirm" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="857554104218204">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="755546264752465" type="System">
+                            <param id="0" name="First value">gInitialValue</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">int(ees_txtResult.Text)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="933984243565332" type="System">
+                            <param id="0" name="Variable">gValAdjust</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="332329786517602" type="System">
+                            <param id="0" name="Variable">gValAdjust</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="720553207672900" type="System">
+                            <param id="0" name="Variable">gInitialValue</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="118948660631041" type="System">
+                            <param id="0" name="Variable">gCounter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="108005080919705" type="System">
+                            <param id="0" name="Variable">gTypeofAdjust</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="306827422682730" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>CSS </comment>
+        <event-block sid="768833011749130">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="148096214842629" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="726228759178143" type="ees_txtFinalValue">
+                    <param id="0" name="Text">&quot;Valor Final: &quot;&amp;gInitialValue</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="869574306304005" type="ees_txtResult">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;40px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="744960631769264" type="ees_txtResult">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;Snap ITC&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="579641535752662" type="ees_btnConfirm">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;22px&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="127480797568133" type="ees_btnConfirm">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;Snap ITC&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="579145096058941" title="Teclado2">
+            <sub-events>
+                <event-block sid="164265528939630">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="741433628551131" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">glo_imgKeyKeyboard</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="641440377655684">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="931322486450778" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="412782784434160" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="325416708316168">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="474102878255544" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="860214432199415" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="149575505259856">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="170474184473310" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="921200471938279" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="757957069962738">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="332078417433241" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="110797921049640" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="772518067442352">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="439295066625653" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="783823141936409" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;4&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="916633301904087">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="274819366391693" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="928115384204716" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;5&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="201107853618140">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="906556391967486" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="101264827058099" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;6&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481028198387638">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="153649556938864" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="735083970413514" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;7&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="464925688023599">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="883430940149012" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="461106525629667" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;8&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="156075957972729">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="707400201316525" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="562759732909221" type="ees_txtResult">
+                                    <param id="0" name="Text">ees_txtResult.Text&amp;&quot;9&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="993782966203234">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="636915376019926" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="404642643617082" type="ees_txtResult">
+                                    <param id="0" name="Text">left(ees_txtResult.Text,len(ees_txtResult.Text)-1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="319252441138641">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="351173237740662" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">11</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="500172086043401">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="329825223965635" type="System">
+                                            <param id="0" name="First value">gInitialValue</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">int(ees_txtResult.Text)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="991645198205332" type="System">
+                                            <param id="0" name="Variable">gValAdjust</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="990875327607471" type="System">
+                                            <param id="0" name="Variable">gValAdjust</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="588315875386661" type="System">
+                                            <param id="0" name="Variable">gInitialValue</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="669079004080619" type="System">
+                                            <param id="0" name="Variable">gCounter</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="901734833851562" type="System">
+                                            <param id="0" name="Variable">gTypeofAdjust</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="726408020392855" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="115310204669965">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="778773816678228" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="912418716207782" type="System">
+                                    <param id="0" name="Variable">gMinimized</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="337457012670334" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="719991345429686" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Frame number">13</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="557890708826651">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="445004651346164" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="892116818650753" type="System">
+                                    <param id="0" name="Variable">gMinimized</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="283449665804888" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="424342870848537" type="glo_imgKeyKeyboard">
+                                    <param id="0" name="Frame number">12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="547936717012115">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="862101799025745" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Caso não esteja minimizado ele abre</comment>
+                        <event-block sid="444298855415657">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="252251071310410" type="System">
+                                    <param id="0" name="Variable">gMinimized</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="604391862700363">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="642379750571534" type="System">
+                                            <param id="0" name="Object">glo_imgKeyKeyboard</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="405398035950898" type="System">
+                                            <param id="0" name="Object">glo_imgKeyKeyboard</param>
+                                            <param id="1" name="Expression">glo_imgKeyKeyboard.AnimationFrame</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">12</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="565895169070439" type="System">
+                                            <param id="0" name="Object">glo_imgKeyKeyboard</param>
+                                            <param id="1" name="Expression">glo_imgKeyKeyboard.AnimationFrame</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="446802214612553" type="glo_imgKeyKeyboard">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="859854201639251" type="glo_imgGrayKeyboard">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Caso esteja minimizado ele fecha</comment>
+                        <event-block sid="736177555576859">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="860207915742501" type="System">
+                                    <param id="0" name="Variable">gMinimized</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="858177555206756">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="831418127451078" type="System">
+                                            <param id="0" name="Object">glo_imgKeyKeyboard</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="505288233061518" type="System">
+                                            <param id="0" name="Object">glo_imgKeyKeyboard</param>
+                                            <param id="1" name="Expression">glo_imgKeyKeyboard.AnimationFrame</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">12</param>
+                                        </condition>
+                                        <condition id="-33" name="Pick by comparison" sid="709855902210337" type="System">
+                                            <param id="0" name="Object">glo_imgKeyKeyboard</param>
+                                            <param id="1" name="Expression">glo_imgKeyKeyboard.AnimationFrame</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">13</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="446255060969631" type="glo_imgKeyKeyboard">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="887556036495378" type="glo_imgGrayKeyboard">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

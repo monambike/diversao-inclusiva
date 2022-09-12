@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esalmoxarife-plataformapt2</name>
+    <events>
+        <event-block sid="384071011124938">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="444097989439036" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="170995831943499" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="536873575805754">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="723687942180180" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="309201394747342" type="jmherof2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="834578290953341" type="jmherospritef2pt">
+                    <param id="0" name="Pin to">jmherof2</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="592407102649329" type="jmanimacaopt" />
+                <action behavior="Fade" id="1" name="Start fade" sid="909270788396448" type="jmbck21pt" />
+                <action id="4" name="Set animation" sid="415648828169784" type="jmanimacaopt">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="757046924716951" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="4" name="Set animation" sid="368525510162909" type="jmanimacaopt">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="656805428077130" type="jmanimacaopt">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="119649052939126" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="372961783411025" type="jmanimacaopt">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="2" name="Stop" sid="906012761878255" type="jmanimacaopt" />
+                <action id="4" name="Set animation" sid="746134385385764" type="jmanimacaopt">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="590046532884100" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="840845260718698" type="jmherospritef2pt">
+                    <param id="0" name="X">225</param>
+                    <param id="1" name="Y">977</param>
+                </action>
+                <action id="-3" name="Set position" sid="939208430326878" type="jmherof2">
+                    <param id="0" name="X">287.5</param>
+                    <param id="1" name="Y"> 887.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="362000717511008" type="jmanimacaopt" />
+                <action id="-16" name="Wait" sid="815466832149020" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="220775266928213" type="jmherof2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="212730011978322" type="jmmartelopt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="694815441902401" type="jmlapispt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="381012904514633" type="jmchavept">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="682034708463238">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="747760808714982" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="245095119579348" type="jmherof2">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="690069966405654" type="jmherospritef2pt">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="718865531006644" type="jmherospritef2pt">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="114730080093736">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="705236197433633" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="622278452359927" type="jmherof2">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="163294235101263" type="jmherospritef2pt">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="532237194181799" type="jmherospritef2pt">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="870016516071350">
+            <conditions>
+                <condition id="0" name="On click" sid="167213143430514" type="Mouse">
+                    <param id="0" name="Mouse button">1</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="406202552834732" type="jmherof2">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="611884039316482" type="jmherospritef2pt">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="232421461924484">
+            <conditions>
+                <condition behavior="Platform" id="1" name="Compare speed" sid="752565676012418" type="jmherof2">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="108812197684534" type="jmherospritef2pt">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="326067273563799">
+                    <conditions>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="750665721367136" type="jmherof2">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="774574208050725">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="568747847786807" type="jmherof2" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="134395633772130">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="576280990316840" type="jmherof2" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="809150041350531" type="jmherospritef2pt">
+                    <param id="0" name="Animation">&quot;caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="864328163449622">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="352030222881538" type="jmheropt" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="643285790774558">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="743446906022052" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="727950313232334" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;pulando&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="576865398515282" type="jmherospritept">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="585553816151737">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="970404287394127" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="523232828758379" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="755595519811784">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="866668646244838" type="jmheropt" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="764874715441061" type="jmherospritept">
+                            <param id="0" name="Animation">&quot;caindo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="430979418675706">
+            <conditions>
+                <condition id="12" name="Compare speed" sid="846017531490977" type="jmherof2">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="882988239655040">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="668334785349321" type="jmherof2" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="223494654928316" type="jmherospritef2pt">
+                            <param id="0" name="Animation">&quot;pulando&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="223035198138772" type="jmherospritef2pt">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="994008186132663">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="276042053569750" type="jmherof2">
+                            <param id="0" name="Object">jmchaofase</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="480310073539624" type="jmherospritef2pt">
+                            <param id="0" name="Animation">&quot;parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="404520881481103">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="811292698193572" type="jmherospritef2pt">
+                    <param id="0" name="Object">jmarm1pt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="926320444299287" type="jmarm1pt" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="730122034203511" type="jmherof2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="131750608375987" type="jmtxtobj">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="884909121563469" type="jmherospritef2pt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="288626364543354" type="System">
+                    <param id="0" name="Object to create">jmhero2f2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmherospritef2pt.X</param>
+                    <param id="3" name="Y">jmherospritef2pt.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="600908484459548" type="System">
+                    <param id="0" name="Object to create">jmanmviradopt</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmhero2f2.X</param>
+                    <param id="3" name="Y">jmhero2f2.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="114584736692897" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="630560155118488" type="jmmartelopt" />
+                <action id="-9" name="Destroy" sid="543126278251410" type="jmlapispt" />
+                <action id="-9" name="Destroy" sid="529260209349607" type="jmchavept" />
+                <action id="-16" name="Wait" sid="966354077471209" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="893419869246269" type="jmanmviradopt" />
+                <action id="-9" name="Destroy" sid="452212328683071" type="jmhero2f2" />
+                <action id="-9" name="Destroy" sid="378197351335191" type="jmtxtobj" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="591102624309418" type="jmherof2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="310770001278167" type="jmherospritef2pt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="202021744229599">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="355251621545625" type="jmherospritef2pt">
+                    <param id="0" name="Object">jmatvfinalpt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="744059930081961" type="jmherof2">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="635808535730470" type="jmherospritef2pt">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="728504733401822" type="jmherospritef2pt" />
+                <action behavior="Bullet" id="5" name="Set enabled" sid="975965291653545" type="jmherof2">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="494140237984218" type="jmherospritef2pt" />
+                <action behavior="Pin" id="0" name="Pin to object" sid="712443184688387" type="jmcs">
+                    <param id="0" name="Pin to">jmherof2</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="586991153322571" type="jmcs">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="469182673115448" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="579792477065227" type="jmportakkk" />
+                <action behavior="Fade" id="1" name="Start fade" sid="473648122699760" type="jmbck22pt" />
+                <action id="-16" name="Wait" sid="378654841453085" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="384791192601641" type="jmpreto">
+                    <param id="0" name="Layer">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

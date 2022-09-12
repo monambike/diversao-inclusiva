@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TelaDeInicio</name>
+    <events>
+        <event-block sid="740737769644544">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="475286421432999" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="941572577212992" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="743532828674188">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="742096687918817" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Text4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="228790867735094" type="System">
+                    <param id="0" name="Layout">&quot;EscolhaDeJogoAlmoxarife&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="550982498035374">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="349586152329855" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Text53</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="255262153540548" type="System">
+                    <param id="0" name="Layout">&quot;EscolhaDeJogoVendas&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

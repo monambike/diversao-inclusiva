@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>recolher-objetos</name>
+    <events>
+        <variable constant="0" name="vida" sid="283982921107945" static="0" type="number">3</variable>
+        <variable constant="0" name="vida_max" sid="817504023294239" static="0" type="number">3</variable>
+        <event-block sid="704521115277253">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="679667331896529" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="694311859155778" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+                <action id="-9" name="Set value" sid="161344745529981" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="793633530178664">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="575563217051180" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">jmb3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="871988616463900" type="System">
+                    <param id="0" name="Layout">recolher-objetos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="776830328635509">
+            <conditions />
+            <actions>
+                <action id="5" name="Set frame" sid="398969018135947" type="jmrevida">
+                    <param id="0" name="Frame number">vida</param>
+                </action>
+                <action id="5" name="Set frame" sid="900206249055607" type="jmvida_maxima">
+                    <param id="0" name="Frame number">vida_max</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="130255686023546">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="457918419388545" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="724685506694003" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+                <action id="-3" name="Set position" sid="891591708302691" type="jmrecursor">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">1060</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="992720058074747">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="452263490760457" type="System">
+                    <param id="0" name="Interval (seconds)">2.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="259560232519159" type="jmreobjetos">
+                    <param id="0" name="Frame number">random(0,4)</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="359308688987154" type="jmregerador">
+                    <param id="0" name="Object">jmreobjetos</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">random(1,15)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="920836451500230">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="562852434116232" type="System">
+                    <param id="0" name="Interval (seconds)">5.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="490418195315160" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="5" name="Set frame" sid="478754339875605" type="jmlixo">
+                    <param id="0" name="Frame number">random(0,4)</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="800195078745416" type="jmregerador2">
+                    <param id="0" name="Object">jmlixo</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">random(0,5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="952891004769187">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="614050816475192" type="jmreobjetos">
+                    <param id="0" name="Object">jmrecursor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="729631369260535" type="jmrepoints">
+                    <param id="0" name="Instance variable">ponto</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="544208998758155" type="jmrepoints">
+                    <param id="0" name="Text">jmrepoints.ponto</param>
+                </action>
+                <action id="-9" name="Destroy" sid="370300753319537" type="jmreobjetos" />
+                <action id="3" name="Start" sid="390225798301663" type="jmrepoeira">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="646259754144642" type="System">
+                    <param id="0" name="Object to create">jmrepoeira</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmreobjetos.X</param>
+                    <param id="3" name="Y">jmreobjetos.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="986953361029980" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="822136628291383" type="jmrepoeira" />
+            </actions>
+        </event-block>
+        <event-block sid="544559478292761">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="883599858523058" type="jmlixo">
+                    <param id="0" name="Object">jmrecursor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="724916657185342" type="jmlixo" />
+                <action id="-11" name="Subtract from" sid="423487362681453" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="660423551690218" type="System">
+                    <param id="0" name="Object to create">jmreexplosao</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmlixo.X</param>
+                    <param id="3" name="Y">jmlixo.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="489463525587240" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="385946726366234" type="jmreexplosao" />
+            </actions>
+        </event-block>
+        <event-block sid="747081380267343">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="258630785615391" type="jmlixo">
+                    <param id="0" name="Object">jmrechao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="888642638091079" type="jmlixo" />
+                <action id="-3" name="Create object" sid="604136520295710" type="System">
+                    <param id="0" name="Object to create">redsfx</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmlixo.X</param>
+                    <param id="3" name="Y">jmlixo.Y</param>
+                </action>
+                <action id="-16" name="Wait" sid="251652043523162" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="188242848358330" type="redsfx" />
+            </actions>
+        </event-block>
+        <event-block sid="274132023881461">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="840880807702956" type="jmreobjetos">
+                    <param id="0" name="Object">jmrechao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="898712941278917" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="890636480301951" type="System">
+                    <param id="0" name="Object to create">bluesfx</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">jmreobjetos.x</param>
+                    <param id="3" name="Y">jmreobjetos.y</param>
+                </action>
+                <action id="-16" name="Wait" sid="347208709995106" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="593036674053336" type="bluesfx" />
+            </actions>
+        </event-block>
+        <event-block sid="703469175969009">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="170817315298306" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="441906248224778" type="jmrevida_extra">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="745872763926591" type="jmrevida">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="267925276913635" type="jmvida_maxima">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="831297721227564" type="jmrepoints">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="967714630239364" type="jmretext_points">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="988969609025711" type="jmregerador" />
+                <action id="-9" name="Destroy" sid="218285940549923" type="jmreobjetos" />
+                <action id="-9" name="Destroy" sid="924081374970237" type="jmregerador2" />
+                <action id="-9" name="Destroy" sid="873458855464823" type="jmlixo" />
+                <action behavior="Pin" id="1" name="Unpin" sid="925955472463000" type="jmrecursor" />
+                <action id="-9" name="Destroy" sid="366599297725529" type="jmrecursor" />
+                <action id="-15" name="Set visible" sid="856803735398276" type="jmb1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="131556915776560" type="jmb1" />
+                <action id="-15" name="Set visible" sid="596046591162839" type="jmb2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="905153462054069" type="jmb2" />
+                <action id="-15" name="Set visible" sid="797904613673401" type="jmb3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="229138696982140" type="jmb3" />
+                <action id="-15" name="Set visible" sid="734477811458626" type="jmmessage">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="719585274575677" type="jmmessage" />
+                <action id="-15" name="Set visible" sid="837709315759646" type="jmmenuelement">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="704104455217312" type="jmmenuelement" />
+                <action id="-15" name="Set visible" sid="545760315336334" type="jmtext1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="807908280649766" type="jmtext1" />
+                <action id="-15" name="Set visible" sid="260190396669243" type="jmtext2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="387094723193682" type="jmtext2" />
+                <action id="-16" name="Wait" sid="483766946928334" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="380171778430321" type="jmrecursor_mouse">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
+                </action>
+                <action id="1" name="Set cursor from sprite" sid="217404338357303" type="Mouse">
+                    <param id="0" name="Sprite">jmrecursor_mouse</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="101644967968933" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="697658366363864">
+                    <conditions>
+                        <condition id="0" name="On click" sid="107987797137456" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="914559882996479" type="jmrecursor_mouse">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="482492401439215">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="466110754019290" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="378527491334501" type="jmrecursor_mouse">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="128355952749304">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="641282474365933" type="System">
+                    <param id="0" name="Interval (seconds)">random(0,20)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="955262158017717" type="jmregerador">
+                    <param id="0" name="Object">jmrevida_extra</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="909177864681666">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="836515046779255" type="jmrevida_extra">
+                    <param id="0" name="Object">jmrecursor</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="647279839392529" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">vida_max</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="152399278163808" type="jmrevida_extra" />
+                <action id="-10" name="Add to" sid="427325436984454" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

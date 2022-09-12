@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Vendas-EntregaItens</name>
+    <events>
+        <variable constant="0" name="Score" sid="937538996720118" static="0" type="number">0</variable>
+        <variable constant="0" name="CondicaoMouse" sid="874471418385054" static="0" type="number">0</variable>
+        <variable constant="0" name="EntregaItemCliente" sid="400431772193316" static="0" type="number">0</variable>
+        <variable constant="0" name="Objeto" sid="262948143261986" static="0" type="number">0</variable>
+        <variable constant="0" name="Pedido2" sid="765658226940567" static="0" type="number">0</variable>
+        <event-group description="" sid="765818193267927" title="Cliente">
+            <sub-events>
+                <event-block sid="905687044851111">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="311775622769136" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="850274593332338">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="878420606490447" type="System">
+                                    <param id="0" name="Variable">EntregaItemCliente</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="494060510679667" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="615951195118339" type="VendasCli1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="199696602856789" type="imgLivroVendas">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="245329325511056" type="baloonpedido">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="600839908891997" type="imgLivroVendas">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134899872771899">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="413745306128417" type="System">
+                                    <param id="0" name="Variable">EntregaItemCliente</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="597628144441260" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="780129720660117" type="VendasCli1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="182997053608098" type="VendasCli2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="110243511357610" type="imgLivroVendas">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="859659580254191">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="800375300708461" type="System">
+                                    <param id="0" name="Variable">EntregaItemCliente</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="166132582749270" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="109963951642076" type="VendasCli2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="547862010812088" type="VendasCli3">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="399466716868591" type="imgLivroVendas">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="408191605116820" title="SemEntrega2">
+            <sub-events>
+                <event-block sid="539917083765980">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="920718621502293" type="System">
+                            <param id="0" name="Variable">Objeto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="293532023225234">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="849274725295947" type="Mouse">
+                                    <param id="0" name="Mouse button">1</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">VendasCli1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="272181790265878" type="txtvei2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="908174952865355" type="imgLivroVendas">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372925981594837">
+                            <conditions>
+                                <condition id="1" name="On any click" sid="215019282455992" type="Mouse" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="105129215524405" type="txtvei2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="122795790662769" type="imgLivroVendas">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="942225307110282" type="System">
+                                    <param id="0" name="Variable">Objeto</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="268399932587368" type="System">
+                                    <param id="0" name="Variable">CondicaoMouse</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="351843756505974" type="imgLivroVendas2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="272705361940143" title="ItemErrado">
+            <sub-events>
+                <event-block sid="832177506310985">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="513905700994444" type="System">
+                            <param id="0" name="Variable">Objeto</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="824496868145135" type="System">
+                            <param id="0" name="Variable">Objeto</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Pedido</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="488597482510038">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="168931587000997" type="Mouse">
+                                    <param id="0" name="Mouse button">1</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">VendasCli1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="569307797705922" type="txtvei1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="964045710270829" type="baloonpedido" />
+                                <action id="-25" name="Move to bottom" sid="214795288019073" type="imgLivroVendas" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="743690711272223">
+                            <conditions>
+                                <condition id="1" name="On any click" sid="276878320687178" type="Mouse" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="874886278882913" type="txtvei1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="699736444637997" type="baloonpedido" />
+                                <action id="-24" name="Move to top" sid="431016630324375" type="imgLivroVendas" />
+                                <action id="-9" name="Set value" sid="499879297382641" type="System">
+                                    <param id="0" name="Variable">Objeto</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="728787660455921" type="imgLivroVendas2">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="158313643924112">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="699211404709369" type="System">
+                    <param id="0" name="Variable">Objeto</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Pedido</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="462831219220424">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="833307118946255" type="Mouse">
+                            <param id="0" name="Mouse button">1</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">VendasCli1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="116578911308620" type="System">
+                            <param id="0" name="Variable">EntregaItemCliente</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="635078242722456" type="System">
+                            <param id="0" name="Variable">Objeto</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="101284911895677" type="System">
+                            <param id="0" name="Variable">CondicaoMouse</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="608105623203488" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="248276832821353" title="ClickPrateleira">
+            <sub-events>
+                <event-block sid="848353198490361">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="366681446578304" type="System">
+                            <param id="0" name="Variable">CondicaoMouse</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="922164348024379" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="291581617837191">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="808815450307030" type="Mouse">
+                                    <param id="0" name="Mouse button">1</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">prat1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="350516754312909" type="System">
+                                    <param id="0" name="Variable">Objeto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="107932557334879" type="System">
+                                    <param id="0" name="Variable">CondicaoMouse</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="946276063823980" type="imgLivroVendas2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="848282934333174" type="imgLivroVendas2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="450953825755669">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="409923687818633" type="Mouse">
+                                    <param id="0" name="Mouse button">1</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">prat2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="316818219915594" type="System">
+                                    <param id="0" name="Variable">Objeto</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="653444205576557" type="System">
+                                    <param id="0" name="Variable">CondicaoMouse</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="464715448138980" type="imgLivroVendas2">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="484075801420620" type="imgLivroVendas2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="959936991096176">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="686216223250609" type="Mouse">
+                                    <param id="0" name="Mouse button">1</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">prat3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="309979546264061" type="System">
+                                    <param id="0" name="Variable">Objeto</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="904319595044618" type="System">
+                                    <param id="0" name="Variable">CondicaoMouse</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="323082344514628" type="imgLivroVendas2">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="345802800192769" type="imgLivroVendas2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="528942628145600">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="130619947035561" type="System">
+                    <param id="0" name="Variable">CondicaoMouse</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-group description="" sid="151793518234332" title="Movimentação">
+            <sub-events>
+                <event-block sid="131594774412268">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="798887934111809" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="331652114747417" type="herovei">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="155542856466106" type="Sprite57">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="645436909026593" type="Sprite57">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="218972864589730">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="411770927360687" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="311401100829884" type="herovei">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="230848391229087" type="Sprite57">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="370182685710804" type="Sprite57">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="475562303726374">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="870518219769831" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="266736889988021" type="imgLivroVendas2">
+                    <param id="0" name="X">herovei.X</param>
+                    <param id="1" name="Y">herovei.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="562005139607013" type="imgLivroVendas2">
+                    <param id="0" name="Pin to">herovei</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="167720916936497" type="System">
+                    <param id="0" name="Width">854</param>
+                    <param id="1" name="Height">480</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="210030274828661" type="Sprite57">
+                    <param id="0" name="Pin to">herovei</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="313593342605719" title="Vitória">
+            <sub-events>
+                <event-block sid="518111745951646">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="318694482917483" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="347199769075778" type="txtvei4">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;Score</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="617989539335727" type="btnvei2">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;20pt&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="273308300384506" type="btnvei2">
+                            <param id="0" name="Property name">&quot;font-family&quot;</param>
+                            <param id="1" name="Value">&quot;Elephant&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="392655021226582" type="btnvei2">
+                            <param id="0" name="Property name">&quot;background-color&quot;</param>
+                            <param id="1" name="Value">&quot;#9FB7A5&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="222122671779118" type="btnvei2">
+                            <param id="0" name="Property name">&quot;border-radius&quot;</param>
+                            <param id="1" name="Value">&quot;6px&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="707750151011537" type="btnvei">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;20pt&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="724573723741889" type="btnvei">
+                            <param id="0" name="Property name">&quot;font-family&quot;</param>
+                            <param id="1" name="Value">&quot;Elephant&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="933557493194736" type="btnvei">
+                            <param id="0" name="Property name">&quot;background-color&quot;</param>
+                            <param id="1" name="Value">&quot;#9FB7A5&quot;</param>
+                        </action>
+                        <action id="5" name="Set CSS style" sid="950458117483187" type="btnvei">
+                            <param id="0" name="Property name">&quot;border-radius&quot;</param>
+                            <param id="1" name="Value">&quot;6px&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="705020475356731">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="980638548255727" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="765674470331907" type="mrnuuu">
+                                    <param id="0" name="Y">234</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="733947732173616" type="txtvei3">
+                                    <param id="0" name="X">558</param>
+                                    <param id="1" name="Y">150</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="852691646022776" type="herovei">
+                                    <param id="0" name="X">787</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="442194567010490" type="btnvei2">
+                                    <param id="0" name="Y">288</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="578836632065374" type="btnvei">
+                                    <param id="0" name="Y">288</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="822810898991693" type="txtvei5">
+                                    <param id="0" name="Y">234</param>
+                                </action>
+                                <action id="0" name="Set text" sid="162503926744158" type="txtvei5">
+                                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;Score</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="328187881291752">
+            <conditions>
+                <condition id="0" name="On clicked" sid="663475106158148" type="btnvei" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="125323587029175" type="System">
+                    <param id="0" name="Variable">CondicaoMouse</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="169712278892928" type="System">
+                    <param id="0" name="Variable">EntregaItemCliente</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="112828446336935" type="System">
+                    <param id="0" name="Variable">Objeto</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="262167529567316" type="System">
+                    <param id="0" name="Variable">Pedido</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="230917200326290" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="304431964577841" type="mrnuuu">
+                    <param id="0" name="Y">753</param>
+                </action>
+                <action id="-2" name="Set Y" sid="664088194043677" type="txtvei3">
+                    <param id="0" name="Y">623</param>
+                </action>
+                <action id="-2" name="Set Y" sid="176059929240631" type="btnvei2">
+                    <param id="0" name="Y">800</param>
+                </action>
+                <action id="-2" name="Set Y" sid="295054174672887" type="btnvei">
+                    <param id="0" name="Y">800</param>
+                </action>
+                <action id="-2" name="Set Y" sid="187742710400228" type="txtvei5">
+                    <param id="0" name="Y">704</param>
+                </action>
+                <action id="-16" name="Wait" sid="659076207422560" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="323318715101168" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="168044571849993">
+            <conditions>
+                <condition behavior="Platform" id="1" name="Compare speed" sid="511633292252651" type="herovei">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="891783568756871" type="Sprite57">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="124133840352160">
+                    <conditions>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="159871418777163" type="herovei">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

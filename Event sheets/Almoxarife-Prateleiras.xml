@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Almoxarife-Prateleiras</name>
+    <events>
+        <event-block sid="494284781314834">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="711813185323250" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="634034292218496" type="System">
+                    <param id="0" name="Width">1000</param>
+                    <param id="1" name="Height">600</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="Pedido" sid="626652603186744" static="0" type="number">0</variable>
+        <variable constant="0" name="Telefone" sid="121853018518694" static="0" type="number">0</variable>
+        <variable constant="0" name="Martelo" sid="170916765459126" static="0" type="number">0</variable>
+        <variable constant="0" name="Cubo" sid="198483826426396" static="0" type="number">0</variable>
+        <event-block sid="429873495426580">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="784536491048968" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btnConfig</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="441709862596652" type="System">
+                    <param id="0" name="Layout">&quot;Configurações&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="196094724291073">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="289673674445909" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">VoltarAtendendoCli</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="639849682714000" type="System">
+                    <param id="0" name="Layout">&quot;Almoxarife-AtendendoClientes&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="437057856904196" title="ClickCubo">
+            <sub-events>
+                <event-block sid="630578302599713">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="952849187591966" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">cubo2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="518330511758100">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="285844416846554" type="System">
+                                    <param id="0" name="Variable">Cubo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="563989029344586" type="cubo2">
+                                    <param id="0" name="X">377</param>
+                                    <param id="1" name="Y"> 187</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="200562272077915" type="System">
+                                    <param id="0" name="Variable">Cubo</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="216507235259783" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="348278028166409">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="897292903279325" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">cubo2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="559896921792607">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="698390659981977" type="System">
+                                    <param id="0" name="Variable">Cubo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="279524035441971" type="cubo2">
+                                    <param id="0" name="X">506.091</param>
+                                    <param id="1" name="Y">467.001</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="963943578319280" type="System">
+                                    <param id="0" name="Variable">Cubo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="185226710050215" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="636583463832623" title="ClickMartelo">
+            <sub-events>
+                <event-block sid="709366154401002">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="345690841386825" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">martelo2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="811753218484812">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="832711843892043" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="691783287622402" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="461367685115010" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="943607008744374" type="martelo2">
+                                    <param id="0" name="X">639</param>
+                                    <param id="1" name="Y">303</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="513404358830537" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="215106503934655" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="257806471207100">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="885289216402804" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">martelo2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="571922817721369">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="378013966642048" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="384583371988499" type="martelo2">
+                                    <param id="0" name="X">488.818</param>
+                                    <param id="1" name="Y">470.273</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="581988913061234" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="958916498040278" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="473121097302213" title="ClickTelefone">
+            <sub-events>
+                <event-block sid="819064812897578">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="841750454392769" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">telefone2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="140359086648442">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="529791652924311" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="679330776497746" type="System">
+                                    <param id="0" name="Variable">Martelo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="893956927532584" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="257048770607792" type="telefone2">
+                                    <param id="0" name="X">175</param>
+                                    <param id="1" name="Y">346</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="638504258705162" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="495977543400935" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="632182399911159" type="System">
+                                    <param id="0" name="Variable">Pedido</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="258302471865340">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="313822583630144" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">telefone2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="637322379530341">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="457189350269032" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="356410630978294" type="telefone2">
+                                    <param id="0" name="X">515</param>
+                                    <param id="1" name="Y">501.455</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="499758836833287" type="System">
+                                    <param id="0" name="Variable">Telefone</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

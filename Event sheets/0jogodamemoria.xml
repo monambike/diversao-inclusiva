@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>0jogodamemoria</name>
+    <events>
+        <comment>Dificuldade</comment>
+        <event-block sid="805150636916823">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="687711155843073" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="762456122388674">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="791222694479440" type="System">
+                            <param id="0" name="Variable">gDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="967638727130429" type="System">
+                            <param id="0" name="Variable">gNumberRows</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893057000408952">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="382285467086900" type="System">
+                            <param id="0" name="Variable">gDifficult</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="624960537372944" type="System">
+                            <param id="0" name="Variable">gNumberRows</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Define os Valores das Variáveis</comment>
+        <event-block sid="293498280593580">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="887351364321429" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="498924415108999" type="System">
+                    <param id="0" name="Variable">gNumberCards</param>
+                    <param id="1" name="Value">gNumberColumns*gNumberRows</param>
+                </action>
+                <action id="-9" name="Set value" sid="518935876396611" type="System">
+                    <param id="0" name="Variable">gCardHeight</param>
+                    <param id="1" name="Value">int((LayoutHeight-((gNumberRows+1)*gSpaceBetweenCards))/gNumberRows) </param>
+                </action>
+                <action id="-9" name="Set value" sid="622854347614818" type="System">
+                    <param id="0" name="Variable">gCardWidth</param>
+                    <param id="1" name="Value">int(gCardHeight*(jdm_imgCard.Width/jdm_imgCard.Height))</param>
+                </action>
+                <action id="-9" name="Set value" sid="930471121191075" type="System">
+                    <param id="0" name="Variable">gMarginLeft</param>
+                    <param id="1" name="Value">int((LayoutWidth-(gCardWidth + gSpaceBetweenCards) * gNumberColumns) / 2)</param>
+                </action>
+                <action id="-9" name="Set value" sid="527611879945592" type="System">
+                    <param id="0" name="Variable">gMarginTop</param>
+                    <param id="1" name="Value">int((LayoutHeight-(gCardHeight + gSpaceBetweenCards) * gNumberRows)/2)</param>
+                </action>
+                <action id="-9" name="Set value" sid="216790859034539" type="System">
+                    <param id="0" name="Variable">gCardsCountPicked</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="1" name="Set size" sid="181552618153984" type="jdm_arrayDeck">
+                    <param id="0" name="Width">gNumberCards</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="945704086819605" type="System">
+                    <param id="0" name="Variable">gScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="541366256580555" type="System">
+                    <param id="0" name="Variable">gMatches</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="291910598854174" type="System">
+                    <param id="0" name="Width">1920</param>
+                    <param id="1" name="Height">1080</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Isere os valores no vetor jdm_arrayDeck</comment>
+                <variable constant="0" name="currentCard" sid="852076346186923" static="0" type="number">-1</variable>
+                <event-block sid="202512563774650">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="265498388825185" type="System">
+                            <param id="0" name="Count">gNumberCards</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="960656211643751" type="System">
+                            <param id="0" name="Variable">currentCard</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="902619484889493" type="jdm_arrayDeck">
+                            <param id="0" name="X">currentCard</param>
+                            <param id="1" name="Value">currentCard</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Embaralha as cartas&#x0D;&#x0A;&#x0D;&#x0A;Desativando o repeater, as cartas ficarão lineares e será mais facil para zerar o jogo</comment>
+                <variable constant="0" name="pCard1" sid="990949750612709" static="0" type="number">0</variable>
+                <variable constant="0" name="pCard2" sid="925897744021515" static="0" type="number">0</variable>
+                <variable constant="0" name="vCard1" sid="708130301988801" static="0" type="number">0</variable>
+                <variable constant="0" name="vCard2" sid="975609170518463" static="0" type="number">0</variable>
+                <event-block sid="317084465247720">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="778234745243698" type="System">
+                            <param id="0" name="Count">gRepeatCards</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="220085736997192" type="System">
+                            <param id="0" name="Variable">pCard1</param>
+                            <param id="1" name="Value">random(0, gNumberCards)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="658246185698798" type="System">
+                            <param id="0" name="Variable">pCard2</param>
+                            <param id="1" name="Value">random(0, gNumberCards)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="855771056293653" type="System">
+                            <param id="0" name="Variable">vCard1</param>
+                            <param id="1" name="Value">jdm_arrayDeck.At(pCard1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="535948263591366" type="System">
+                            <param id="0" name="Variable">vCard2</param>
+                            <param id="1" name="Value">jdm_arrayDeck.At(pCard2)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="271925425474370" type="jdm_arrayDeck">
+                            <param id="0" name="X">pCard1</param>
+                            <param id="1" name="Value">vCard2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="315063320545615" type="jdm_arrayDeck">
+                            <param id="0" name="X">pCard2</param>
+                            <param id="1" name="Value">vCard1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Cria o Layout</comment>
+                <variable constant="0" name="CurrentTableCard" sid="348165761338262" static="0" type="number">-1</variable>
+                <variable constant="0" name="CurrentColumn" sid="647783248995561" static="0" type="number">-1</variable>
+                <variable constant="0" name="CurrentRow" sid="492239476874188" static="0" type="number">-1</variable>
+                <event-block sid="589666546366089">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="834586784797824" type="System">
+                            <param id="0" name="Count">gNumberCards</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="263345739178273" type="System">
+                            <param id="0" name="Variable">CurrentTableCard</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="538039354950959" type="System">
+                            <param id="0" name="Variable">CurrentColumn</param>
+                            <param id="1" name="Value">CurrentTableCard%gNumberColumns</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="298086076053597">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="811178052929834" type="System">
+                                    <param id="0" name="First value">CurrentColumn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="473088818900114" type="System">
+                                    <param id="0" name="Variable">CurrentRow</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="938487027138838">
+                            <conditions />
+                            <actions>
+                                <action id="-3" name="Create object" sid="839649308109029" type="System">
+                                    <param id="0" name="Object to create">jdm_imgCard</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">gMarginLeft + (CurrentColumn*(gCardWidth+gSpaceBetweenCards))</param>
+                                    <param id="3" name="Y">gMarginTop + (CurrentRow*(gCardHeight+gSpaceBetweenCards))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="298209613760144" type="jdm_imgCard">
+                                    <param id="0" name="Instance variable">CardFaceFrame</param>
+                                    <param id="1" name="Value">CurrentTableCard</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="343852053951007" type="jdm_imgCard">
+                                    <param id="0" name="Width">gCardWidth</param>
+                                    <param id="1" name="Height">gCardHeight</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="650291731696224" type="jdm_imgCard">
+                                    <param id="0" name="Instance variable">CardFaceFrame</param>
+                                    <param id="1" name="Value">jdm_arrayDeck.At(CurrentTableCard)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="724249852114015" type="jdm_imgCard">
+                                    <param id="0" name="Instance variable">FaceUp</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Vira todas as cartas para cima por 3 segundos e depois volta elas para baixo</comment>
+                                <event-block sid="443428926694525">
+                                    <conditions />
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="266898717098155" type="jdm_imgCard">
+                                            <param id="0" name="Animation">&quot;CardFace&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="946694488417614" type="jdm_imgCard">
+                                            <param id="0" name="Frame number">jdm_imgCard.CardFaceFrame</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="387147969455821" type="jdm_imgCard">
+                                            <param id="0" name="Instance variable">FaceUp</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="256254266175363" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="431073178500206" type="jdm_imgCard">
+                                            <param id="0" name="Animation">&quot;CardBack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="857295725052763" type="jdm_imgCard">
+                                            <param id="0" name="Instance variable">FaceUp</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="375621500421989" type="System">
+                                            <param id="0" name="Variable">gCardsCountPicked</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="927418410789662" type="System">
+                                            <param id="0" name="Variable">gFirstCardFrame</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="691727608105643" type="System">
+                                            <param id="0" name="Variable">gSecondCardFrame</param>
+                                            <param id="1" name="Value">-2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Vira as cartas ao clicar&#x0D;&#x0A;&#x0D;&#x0A;Caso duas cartas estejam para cima não será possivel virar a terceira</comment>
+        <event-block sid="622456517404427">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="188958485075187" type="jdm_imgCard">
+                    <param id="0" name="Instance variable">FaceUp</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="359011748050993" type="System">
+                    <param id="0" name="Variable">gCardsCountPicked</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="984573230813890">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="390913079481193" type="jdm_imgCard">
+                    <param id="0" name="Instance variable">FaceUp</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="761154425489786" type="System">
+                    <param id="0" name="Variable">gCardsCountPicked</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="511932363643241">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="218193019096411" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">jdm_imgCard</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="549487640349400">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="902830623832667" type="System">
+                                    <param id="0" name="Variable">gCardsCountPicked</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="129389226549736" type="jdm_imgCard">
+                                    <param id="0" name="Animation">&quot;CardFace&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="635313451093338" type="jdm_imgCard">
+                                    <param id="0" name="Frame number">jdm_imgCard.CardFaceFrame</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="283118106855724" type="jdm_imgCard">
+                                    <param id="0" name="Instance variable">FaceUp</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="942214119604617" type="System">
+                                    <param id="0" name="Variable">gCardsCountPicked</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="220928437521687">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="821565166418104" type="System">
+                                    <param id="0" name="Variable">gCardsCountPicked</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="696336475431490" type="System">
+                                    <param id="0" name="Variable">gFirstCardFrame</param>
+                                    <param id="1" name="Value">jdm_imgCard.CardFaceFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="959335922901500">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="420008059710732" type="System">
+                                    <param id="0" name="Variable">gCardsCountPicked</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="402172539286956" type="System">
+                                    <param id="0" name="Variable">gSecondCardFrame</param>
+                                    <param id="1" name="Value">jdm_imgCard.CardFaceFrame</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Ele reseta as variáveis caso elas sejam iguais</comment>
+                                <event-block sid="446126613805869">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="825819540627592" type="System">
+                                            <param id="0" name="Variable">gFirstCardFrame</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gSecondCardFrame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="597222198254328" type="System">
+                                            <param id="0" name="Variable">gCardsCountPicked</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="736404367982200">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="597118104902022" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Adiciona pontos ao acertar e quebra a carta</comment>
+                                        <event-block sid="925012347129606">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="837189945266521" type="System">
+                                                    <param id="0" name="First value">gSecondCardFrame-(gSecondCardFrame%2)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">gFirstCardFrame-(gFirstCardFrame%2)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="329039258306102" type="System">
+                                                    <param id="0" name="Variable">gMatches</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="554472207292925" type="System">
+                                                    <param id="0" name="Variable">gScore</param>
+                                                    <param id="1" name="Value">gValuesPoints</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="486069935585306">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="525981740646230" type="System">
+                                                            <param id="0" name="Object">jdm_imgCard</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="150189471909219">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="809801816879788" type="jdm_imgCard">
+                                                                    <param id="0" name="Instance variable">FaceUp</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-16" name="Wait" sid="764339470254129" type="System">
+                                                                    <param id="0" name="Seconds">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Destroy" sid="144711984187870" type="jdm_imgCard" />
+                                                                <action id="-9" name="Set value" sid="967320934096884" type="System">
+                                                                    <param id="0" name="Variable">gCardsCountPicked</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <comment>Aqui define-se quantos pontos serão tirados ao errar</comment>
+                                        <event-block sid="663659854284394">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="811711600045478" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="963588270990228" type="System">
+                                                    <param id="0" name="Variable">gFirstCardFrame</param>
+                                                    <param id="1" name="Value">-1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="424965090511005" type="System">
+                                                    <param id="0" name="Variable">gSecondCardFrame</param>
+                                                    <param id="1" name="Value">-2</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="160976306102173">
+                                                    <conditions>
+                                                        <condition id="-19" name="Pick all" sid="817224630430434" type="System">
+                                                            <param id="0" name="Object">jdm_imgCard</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="647271662559806">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="562792485443008" type="jdm_imgCard">
+                                                                    <param id="0" name="Instance variable">FaceUp</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-16" name="Wait" sid="682398812100785" type="System">
+                                                                    <param id="0" name="Seconds">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="372260785767525" type="jdm_imgCard">
+                                                                    <param id="0" name="Instance variable">FaceUp</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="818073050790636" type="jdm_imgCard">
+                                                                    <param id="0" name="Animation">&quot;CardBack&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="925641769545083" type="System">
+                                                                    <param id="0" name="Variable">gCardsCountPicked</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Reseta o jogo quando todas as cartas forem viradas</comment>
+        <event-block sid="156423724567997">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="854700936346333" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="712147083121401" type="jdm_txtScore">
+                    <param id="0" name="Text">&quot;PONTOS: &quot; &amp; gScore</param>
+                </action>
+                <action id="0" name="Set text" sid="136417624116028" type="jdm_txtCountPicked">
+                    <param id="0" name="Text">&quot;Count Picked: &quot;&amp;gCardsCountPicked</param>
+                </action>
+                <action id="0" name="Set text" sid="732231693875987" type="jdm_txtMatches">
+                    <param id="0" name="Text">&quot;Matches: &quot;&amp;gMatches</param>
+                </action>
+                <action id="0" name="Set text" sid="103056398938693" type="jdm_txtValuesPoints">
+                    <param id="0" name="Text">&quot;Value Points: &quot;&amp;gValuesPoints</param>
+                </action>
+                <action id="0" name="Set text" sid="500032863439749" type="jdm_txtFirstCardFrame">
+                    <param id="0" name="Text">&quot;First Frame: &quot;&amp;gFirstCardFrame</param>
+                </action>
+                <action id="0" name="Set text" sid="862478778065912" type="jdm_txtSecondCardFrame">
+                    <param id="0" name="Text">&quot;Second Frame: &quot;&amp;gSecondCardFrame</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="741352561561502">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="189266131712333" type="System">
+                            <param id="0" name="Variable">gMatches</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">gNumberCards/2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="601880256808953" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
