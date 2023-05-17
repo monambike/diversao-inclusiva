@@ -9,6 +9,12 @@ You can see the video uploaded on my YouTube and Instagram on [Gameplay Video �
 
 You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CrKav5EMpvP/?utm_source=ig_web_copy_link&igshid=MTIyMzRjYmRlZg==).
 
+## How To Play 🕹️
+
+You can play it here: https://projects.monambike.com/diversaoinclusiva_construct
+
+And you can also play it here: https://monambike.itch.io/diversaoinclusiva
+
 ## Game Screenshots 📸
 
 ![Captura de tela 2023-04-18 225327](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a6b5ac50-c796-4f62-acc8-faae3a96907d)
