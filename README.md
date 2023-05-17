@@ -1,11 +1,11 @@
 # Diversão Inclusiva 🎮
 
 A game made as final work made in group for "SENAI" at my Systems Analysis and Development course.
-You can see the video uploaded on my YouTube and instagram on [Gameplay Video 📽️](#gameplay-video) section.
+You can see the video uploaded on my YouTube and instagram on [Gameplay Video 📽️](#gameplay-video-📽️) section.
 
 ![diversaoinclusivathumb](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)
 
-# Gameplay Video
+# Gameplay Video 📽️
 
 You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0).
 
