@@ -7,7 +7,7 @@ You can see the video uploaded on my YouTube and instagram on [Gameplay Video �
 
 # Gameplay Video 📽️
 
-You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0).
+You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/monambike_portfolio).
 
 # Game Screenshots 📸
 
