@@ -5,11 +5,11 @@ You can see the video uploaded on my YouTube and Instagram on [Gameplay Video �
 
 ![diversaoinclusivathumb](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)
 
-# Gameplay Video 📽️
+## Gameplay Video 📽️
 
 You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CrKav5EMpvP/?utm_source=ig_web_copy_link&igshid=MTIyMzRjYmRlZg==).
 
-# Game Screenshots 📸
+## Game Screenshots 📸
 
 ![Captura de tela 2023-04-18 225327](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a6b5ac50-c796-4f62-acc8-faae3a96907d)
 ![Captura de tela 2023-04-18 225655](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a973cd3c-ef2e-4cb2-ae00-cb7690f09df6)
