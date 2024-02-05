@@ -1,3 +1,7 @@
+<img alt="Static Badge" src="https://img.shields.io/badge/MONAMBIKE-%236c00fa?style=for-the-badge&label=MADE%20BY&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/CC--BY--4.0%20license-%236c00fa?style=for-the-badge&label=LICENSE&labelColor=%23050505">
+
+![Itch.io](https://img.shields.io/badge/Itch-%23FF0B34.svg?style=for-the-badge&logo=Itch.io&logoColor=white)
+
 # Diversão Inclusiva 🎮
 
 A game made as final work made in group for "SENAI" at my Systems Analysis and Development course. This project has **16 MINIGAMES**.
@@ -5,9 +9,13 @@ You can see the video uploaded on my YouTube and Instagram on [Gameplay Video �
 
 ![diversaoinclusivathumb](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)
 
+# Contact
+
+You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
+
 ## Watch The Gameplay Video 📽️
 
-You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CrKav5EMpvP/?utm_source=ig_web_copy_link&igshid=MTIyMzRjYmRlZg==).
+You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CuKYpIPubaw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==).
 
 ## Play The Game Here 🕹️
 
