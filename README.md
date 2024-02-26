@@ -11,7 +11,7 @@
 A game made as final work made in group for "SENAI" at my Systems Analysis and Development course. This project has **16 MINIGAMES**.
 You can see the video uploaded on my YouTube and Instagram on [Gameplay Video 📽️](#gameplay-video-%EF%B8%8F) section.
 
-[**Watch Video** →][diversaoinclusiva-youtube] || [**Play Game (On My Website)** →][diversaoinclusiva-playwebsite]
+[**Watch Video (On Youtube)** →][diversaoinclusiva-youtube] || [**Play Game (On My Website)** →][diversaoinclusiva-playwebsite]
   
 [![IMAGE ALT TEXT](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)][diversaoinclusiva-youtube]
   
