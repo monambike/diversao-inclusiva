@@ -24,9 +24,7 @@ You can find the gameplay video [on this video at my YouTube channel](https://ww
 
 ## Play The Game Here 🕹️
 
-You can play it here: https://projects.monambike.com/diversaoinclusiva_construct
-
-And you can also play it here: https://monambike.itch.io/diversaoinclusiva
+You can play it here in [my website][play-github] but you can also play it here at [itch.io][diversaoinclusiva-playitchio].
 
 # Game Screenshots 📸
 
@@ -60,3 +58,5 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
 
 [diversaoinclusiva-youtube]: http://www.youtube.com/watch?v=49rcFSyEFk0
+[diversaoinclusiva-playgithub]: https://projects.monambike.com/diversaoinclusiva_construct
+[diversaoinclusiva-playitchio]: https://monambike.itch.io/diversaoinclusiva
