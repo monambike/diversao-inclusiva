@@ -24,7 +24,7 @@ You can find the gameplay video [on this video at my YouTube channel](https://ww
 
 ## Play The Game Here 🕹️
 
-You can play it here in [my website][play-github] but you can also play it here at [itch.io][diversaoinclusiva-playitchio].
+You can play it here in [my website][diversaoinclusiva-playgithub] or you can also play it here at [itch.io][diversaoinclusiva-playitchio].
 
 # Game Screenshots 📸
 
