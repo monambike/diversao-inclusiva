@@ -4,12 +4,19 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
+<div align="center">
+  
 # Diversão Inclusiva 🎮
 
 A game made as final work made in group for "SENAI" at my Systems Analysis and Development course. This project has **16 MINIGAMES**.
 You can see the video uploaded on my YouTube and Instagram on [Gameplay Video 📽️](#gameplay-video-%EF%B8%8F) section.
 
-![diversaoinclusivathumb](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)
+[**Watch Video** →][diversaoinclusiva-youtube]
+  
+[![IMAGE ALT TEXT](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)][diversaoinclusiva-youtube]
+  
+</div>
+
 
 ## Watch The Gameplay Video 📽️
 
@@ -51,3 +58,5 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 # License
 
 The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
+
+[diversaoinclusiva-youtube]: http://www.youtube.com/watch?v=49rcFSyEFk0
