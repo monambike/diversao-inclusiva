@@ -14,7 +14,9 @@ You can see the video uploaded on my YouTube and Instagram on [Gameplay Video �
 [**Watch Video (On Youtube)** →][diversaoinclusiva-youtube] || [**Play Game (On My Website)** →][diversaoinclusiva-playwebsite]
   
 [![IMAGE ALT TEXT](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)][diversaoinclusiva-youtube]
-  
+
+Hope you have a good time in this repository. 🩷
+
 </div>
 
 # Game Screenshots 📸
