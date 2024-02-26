@@ -21,7 +21,7 @@ You can play it here: https://projects.monambike.com/diversaoinclusiva_construct
 
 And you can also play it here: https://monambike.itch.io/diversaoinclusiva
 
-## Game Screenshots 📸
+# Game Screenshots 📸
 
 
 <p>
@@ -34,12 +34,12 @@ And you can also play it here: https://monambike.itch.io/diversaoinclusiva
   <img height="300"  width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/73f76790-76ed-4ad7-a24e-a6d68dedc176)"/>
 </p>
 
-### Mini Game Selection
+## Mini Game Selection
 
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/91099770-f7b6-49ea-b19b-75e8874e5690"/>
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/594f6271-73a4-4a95-8309-cc65316837c7)"/>
 
-### Main Menu
+## Main Menu
 
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/af0dd09c-00e0-409f-a0cc-bfa2f54e6cc6)"/>
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/6d8852fc-b3a7-4992-93b8-275aed3404c1)"/>
