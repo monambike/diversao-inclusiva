@@ -11,7 +11,7 @@
 A game made as final work made in group for "SENAI" at my Systems Analysis and Development course. This project has **16 MINIGAMES**.
 You can see the video uploaded on my YouTube and Instagram on [Gameplay Video 📽️](#gameplay-video-%EF%B8%8F) section.
 
-[**Watch Video** →][diversaoinclusiva-youtube] [**Play Game (Website)** →][diversaoinclusiva-playwebsite]
+[**Watch Video** →][diversaoinclusiva-youtube] || [**Play Game (On My Website)** →][diversaoinclusiva-playwebsite]
   
 [![IMAGE ALT TEXT](https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a31bdb99-ae38-4962-a36a-750cf326bb10)][diversaoinclusiva-youtube]
   
@@ -49,7 +49,7 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
 
 [diversaoinclusiva-youtube]: http://www.youtube.com/watch?v=49rcFSyEFk0
-[diversaoinclusiva-playgithub]: https://projects.monambike.com/diversaoinclusiva_construct
+[diversaoinclusiva-playwebsite]: https://projects.monambike.com/diversaoinclusiva_construct
 [diversaoinclusiva-playitchio]: https://monambike.itch.io/diversaoinclusiva
 
 # Watch The Gameplay Video 📽️
@@ -58,4 +58,4 @@ You can find the gameplay video [on this video at my YouTube channel](https://ww
 
 # Play The Game Here 🕹️
 
-You can play it here in [my website][diversaoinclusiva-playgithub] or you can also play it here at [itch.io][diversaoinclusiva-playitchio].
+You can play it here in [my website][diversaoinclusiva-playwebsite] or you can also play it here at [itch.io][diversaoinclusiva-playitchio].
