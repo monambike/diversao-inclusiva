@@ -25,6 +25,11 @@ You will find powerpoint slides used to present the project in the school and a 
 
 # Game Screenshots 📸
 
+## Main Menu
+
+<img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/af0dd09c-00e0-409f-a0cc-bfa2f54e6cc6)"/>
+<img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/6d8852fc-b3a7-4992-93b8-275aed3404c1)"/>
+
 ## (Sales) Garbage Recycle
 
 <img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a6b5ac50-c796-4f62-acc8-faae3a96907d)"/>
@@ -45,11 +50,6 @@ You will find powerpoint slides used to present the project in the school and a 
 
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/91099770-f7b6-49ea-b19b-75e8874e5690"/>
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/594f6271-73a4-4a95-8309-cc65316837c7)"/>
-
-## Main Menu
-
-<img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/af0dd09c-00e0-409f-a0cc-bfa2f54e6cc6)"/>
-<img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/6d8852fc-b3a7-4992-93b8-275aed3404c1)"/>
 
 # Watch The Gameplay Video 📽️
 
