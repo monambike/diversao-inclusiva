@@ -19,6 +19,10 @@ Hope you have a good time in this repository. 🩷
 
 </div>
 
+# Docs Folder
+
+You will find powerpoint slides used to present the project in the school and a extensive document showcasing the application functions.
+
 # Game Screenshots 📸
 
 
