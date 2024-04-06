@@ -53,7 +53,7 @@ You will find powerpoint slides used to present the project in the school and a 
 
 # Watch The Gameplay Video 📽️
 
-You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CuKYpIPubaw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==).
+You can find the gameplay video [on YouTube](https://www.youtube.com/watch?v=49rcFSyEFk0) or [on Instagram](https://www.instagram.com/reel/CuKYpIPubaw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==).
 
 # Play The Game Here 🕹️
 
