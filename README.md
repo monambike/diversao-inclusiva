@@ -25,16 +25,21 @@ You will find powerpoint slides used to present the project in the school and a 
 
 # Game Screenshots 📸
 
+## (Sales) Garbage Recycle
 
-<p>
-  <img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a6b5ac50-c796-4f62-acc8-faae3a96907d)"/>
-  <img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a973cd3c-ef2e-4cb2-ae00-cb7690f09df6)"/>
-</p>
+<img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a6b5ac50-c796-4f62-acc8-faae3a96907d)"/>
 
-<p>
-  <img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/3680d03a-507f-4fd9-a6e8-49e800d39b22)"/>
-  <img height="300"  width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/73f76790-76ed-4ad7-a24e-a6d68dedc176)"/>
-</p>
+## (Warehouse) Platform Game
+
+<img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/a973cd3c-ef2e-4cb2-ae00-cb7690f09df6)"/>
+
+## (Warehouse) 7 Mistakes Game
+
+<img height="300" width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/3680d03a-507f-4fd9-a6e8-49e800d39b22)"/>
+
+## (Sales) Brushing Teeth
+
+<img height="300"  width="400" src="https://github.com/monambike/diversaoinclusiva_construct/assets/35270174/73f76790-76ed-4ad7-a24e-a6d68dedc176)"/>
 
 ## Mini Game Selection
 
