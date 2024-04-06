@@ -46,6 +46,14 @@ You will find powerpoint slides used to present the project in the school and a 
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/af0dd09c-00e0-409f-a0cc-bfa2f54e6cc6)"/>
 <img height="300" width="400" src="https://github.com/monambike/diversao-inclusiva/assets/35270174/6d8852fc-b3a7-4992-93b8-275aed3404c1)"/>
 
+# Watch The Gameplay Video 📽️
+
+You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CuKYpIPubaw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==).
+
+# Play The Game Here 🕹️
+
+You can play it here in [my website][diversaoinclusiva-playwebsite] or you can also play it here at [itch.io][diversaoinclusiva-playitchio].
+
 # Contact
 
 You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
@@ -57,11 +65,3 @@ The license for this repository is available [here](LICENSE). Please refer to th
 [diversaoinclusiva-youtube]: http://www.youtube.com/watch?v=49rcFSyEFk0
 [diversaoinclusiva-playwebsite]: https://projects.monambike.com/diversaoinclusiva_construct
 [diversaoinclusiva-playitchio]: https://monambike.itch.io/diversaoinclusiva
-
-# Watch The Gameplay Video 📽️
-
-You can find the gameplay video [on this video at my YouTube channel](https://www.youtube.com/watch?v=49rcFSyEFk0) or [in this video at my Instagram account](https://www.instagram.com/reel/CuKYpIPubaw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==).
-
-# Play The Game Here 🕹️
-
-You can play it here in [my website][diversaoinclusiva-playwebsite] or you can also play it here at [itch.io][diversaoinclusiva-playitchio].
