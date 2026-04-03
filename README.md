@@ -59,6 +59,15 @@ You can find the gameplay video [on YouTube](https://www.youtube.com/watch?v=49r
 
 You can play it here in [my website][diversaoinclusiva-playwebsite] or you can also play it here at [itch.io][diversaoinclusiva-playitchio].
 
+# Project Members
+
+- **Vinícius Gabriel Marques de Melo** – Backend Developer
+- **Ronaldo Junior de O. Benzi** - Backend Developer
+- **João Vitor B. Meni**
+- **Marina Sorati** – Web Designer and Presentation
+- **Isabelly Negrini Arcilla Oliveira** – Web Designer and Presentation
+- **Abner Augusto O. Q. Neto** - Course Completion Monograph and Documentation
+
 # Contact
 
 You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
