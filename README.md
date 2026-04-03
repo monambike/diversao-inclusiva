@@ -63,9 +63,9 @@ You can play it here in [my website][diversaoinclusiva-playwebsite] or you can a
 
 - **Vinícius Gabriel Marques de Melo** – Backend Developer
 - **Ronaldo Junior de O. Benzi** - Backend Developer
-- **João Vitor B. Meni**
-- **Marina Sorati** – Web Designer and Presentation
-- **Isabelly Negrini Arcilla Oliveira** – Web Designer and Presentation
+- **João Vitor B. Meni** - Game Art and Sound Design
+- **Marina Sorati** – Web Designer, Game Art and Presentation
+- **Isabelly Negrini Arcilla Oliveira** – Web Designer, Game Art and Presentation
 - **Abner Augusto O. Q. Neto** - Course Completion Monograph and Documentation
 
 # Contact
